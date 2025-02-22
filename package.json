@@ -6,7 +6,7 @@
     "build:tailwind": "tailwindcss -i ./assets/css/tailwind.css -o ./assets/css/style.css",
     "build": "npm run build:tailwind && bundle exec jekyll build",
     "watch:tailwind": "tailwindcss -i ./assets/css/tailwind.css -o ./assets/css/style.css --watch",
-    "watch": "npm run watch:tailwind & bundle exec jekyll serve --watch",
+    "watch": "npm run watch:tailwind & jekyll serve --watch",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [],
