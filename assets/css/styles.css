@@ -1,0 +1,10 @@
+/* assets/css/styles.css */
+---
+# This yaml frontmatter is required for jekyll to process the file
+---
+
+@import "tailwindcss";
+
+.btn {
+  @apply rounded border border-gray-300;
+}
