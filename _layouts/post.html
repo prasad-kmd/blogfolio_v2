@@ -42,17 +42,17 @@
                 </div>
               
                 <footer>
-                  <p>Categories:
-                    {% for category in page.categories %}
-                      <a href="{{ site.baseurl }}/categories/#{{ category | slugize }}">{{ category }}</a>
-                    {% endfor %}
-                  </p>
-                  <p>Tags:
-                    {% for tag in page.tags %}
-                      <a href="{{ site.baseurl }}/tags/#{{ tag | slugize }}">{{ tag }}</a>
-                    {% endfor %}
-                  </p>
-                </footer>
+                    <p>Categories:
+                      {% for category in page.categories %}
+                        <a href="{{ site.baseurl }}{{ '/category/' | append: category | slugify }}/">{{ category }}</a>
+                      {% endfor %}
+                    </p>
+                    <p>Tags:
+                      {% for tag in page.tags %}
+                        <a href="{{ site.baseurl }}{{ '/tag/' | append: tag | slugify }}/">{{ tag }}</a>
+                      {% endfor %}
+                    </p>
+                  </footer>
               </article>
         </div>
     </main>
