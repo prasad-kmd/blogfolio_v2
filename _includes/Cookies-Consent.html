@@ -185,12 +185,6 @@
         const analyticsCheckbox = document.getElementById('analytics');
         const marketingCheckbox = document.getElementById('marketing');
 
-        // Show consent form after a short delay
-        setTimeout(() => {
-            consent.classList.add('active');
-            overlay.classList.add('active');
-        }, 1000);
-
         // Helper function to safely store preferences
         function safeStorage(key, value) {
             try {
@@ -201,6 +195,19 @@
                 return false;
             }
         }
+
+        // **CHECK IF PREFERENCES EXIST BEFORE SHOWING CONSENT**
+        if (localStorage.getItem('gdprPreferences')) {
+            console.log('Preferences already saved, not showing consent form.');
+            return; // Exit the function if preferences exist
+        }
+
+
+        // Show consent form after a short delay
+        setTimeout(() => {
+            consent.classList.add('active');
+            overlay.classList.add('active');
+        }, 1000);
 
         function savePreferences(analytics, marketing) {
             const preferences = {
