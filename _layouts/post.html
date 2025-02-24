@@ -32,7 +32,7 @@
                 <header>
                   <h1>{{ page.title }}</h1>
                   <p class="post-meta">
-                    <i class="fa-solid fa-timer"></i> {{ page.date | date: "%B %d, %Y" }} | {{ site.data.authors[page.author].usericon }}
+                    <i class="fa-duotone fa-solid fa-calendar-days fa-fade"></i> {{ page.date | date: "%B %d, %Y" }} | {{ site.data.authors[page.author].usericon }}
                     <a href="{{ site.data.authors[page.author].url }}">{{ site.data.authors[page.author].name }}</a>
                   </p>
                 </header><br/>
@@ -41,7 +41,7 @@
                   {{ content }}
                 </div>
               
-                <footer>
+                <!-- <footer>
                     <p>Categories:
                       {% for category in page.categories %}
                         <a href="{{ site.baseurl }}{{ '/category/' | append: category | slugify }}/">{{ category }}</a>
@@ -52,7 +52,7 @@
                         <a href="{{ site.baseurl }}{{ '/tag/' | append: tag | slugify }}/">{{ tag }}</a>
                       {% endfor %}
                     </p>
-                  </footer>
+                  </footer> -->
               </article>
         </div>
     </main>
