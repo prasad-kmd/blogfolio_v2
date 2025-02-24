@@ -2,4 +2,16 @@ url: "" # the base hostname & protocol for your site, e.g. http://example.com
 baseurl: "" # the subpath of your site, e.g. /blog
 title: "PM" # the name of your site, e.g. ACME Corp.
 
-permalink: none
+plugins:
+  - jekyll-archives
+
+jekyll-archives:
+  enabled:
+    - categories
+    - tags
+  layouts:
+    category: category
+    tag: tag
+  permalinks:
+    category: '/category/:name/'
+    tag: '/tag/:name/'

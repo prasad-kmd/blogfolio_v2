@@ -1186,7 +1186,7 @@ section.backlight-top:last-child::before {
     height: 100%;
     background: radial-gradient( 50vw circle at var(--mouse-x) var(--mouse-y), var(--pmbsweb-s-cursor-light), transparent 50% );
     opacity: 0.75;
-    z-index: 1;
+    z-index: -1;
 }
 
 /** ==========
