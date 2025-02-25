@@ -6,6 +6,7 @@
         <meta charset="utf-8">
         {% include head.html %} 
         <title>{{ page.title }} - {{ site.title }}</title>
+        <meta name="description" content="{% if page.description %}{{ page.description }}{% elsif post.description %}{{ post.description }}{% else %}{{ site.description }}{% endif %}">
         <link rel="stylesheet" href="{{ "/assets/css/main.css" | relative_url }}">
         {% include font.html %}
       </head>

@@ -8,6 +8,7 @@
     <meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by PM -->
     <!-- Page Title -->
     <title>{% if page.title %}{{ page.title }} | {% endif %}{{ site.title }}</title>
+    <meta name="description" content="{% if page.description %}{{ page.description }}{% elsif post.description %}{{ post.description }}{% else %}{{ site.description }}{% endif %}">
     <!-- Meta Information -->
     <!-- Google Fonts -->
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&amp;display=swap" rel="stylesheet">
