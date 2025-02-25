@@ -4,9 +4,10 @@
 <!-- Page Title -->
 <title>{% if page.title %}{{ page.title }} | {% endif %}{{ site.title }}</title>
 <!-- Meta Information -->
-<meta name="description"
+<!-- <meta name="description"
     content="PRASAD MADHURANGA'S OFFICIAL INDEX WEBSITE which provides you information about him.
-        Author: Prasad Madhuranga, Redesigner: PRASAD.KMD™ 2024 , PRASAD.KMD™ - INFINTE IMAGINATION WITH SINHAGIRI™ VISUAL STUDIO" />
+        Author: Prasad Madhuranga, Redesigner: PRASAD.KMD™ 2024 , PRASAD.KMD™ - INFINTE IMAGINATION WITH SINHAGIRI™ VISUAL STUDIO" /> -->
+<meta name="description" content="{{ page.description | default: site.description }}">
 <meta content="PRASAD MADHURANGA" name="Author" />
 <meta content="PMBS's PWA" name="application-name" />
 <meta name="twitter:site" content="@prasadmadhuran1" />

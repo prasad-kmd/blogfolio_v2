@@ -1,0 +1,58 @@
+<!-- Section: Page Title -->
+<section class="backlight-bottom">
+    <div class="stg-row stg-bottom-gap-l">
+        <div class="stg-col-8 stg-tp-bottom-gap" data-appear="fade-right" data-unload="fade-left">
+            <h2>{{ page.title }}</h2>
+        </div>
+        <div class="stg-col-4 stg-tp-col-8 stg-tp-offset-4 tp-align-right stg-m-col-9 stg-m-offset-3" data-appear="fade-left" data-unload="fade-right">
+            <p>{{ page.description }}</p>
+        </div>
+    </div>
+
+    {% assign post_content = page.content %}
+    {% assign images = post_content | split: '<img' %}
+    {% assign image_count = images | size | minus: 1 %} 
+
+    {% if image_count > 0 %}
+    <!-- Slider -->
+    <div class="pmbsweb-slider-wrapper pmbsweb-masked-block stg-bottom-gap" data-appear="fade-up" data-delay="100" data-unload="fade-up">
+        <div class="swiper pmbsweb-slider pmbsweb-masked-media" data-autoplay="2000" data-duration="800" data-effect="slide">
+            <div class="swiper-wrapper">
+                {% for i in (1..3) %}
+                    {% if i <= image_count %}
+                        {% assign image = images[i] | split: '>' | first | split: 'src="' | last | split: '"' | first %}
+                <!-- Slider Item -->
+                <div class="swiper-slide">
+                    <img src="{{ image }}" alt="Image: {{ page.title }}" width="1920" height="1080">
+                </div>
+                {% endif %}
+            {% endfor %}
+            </div>
+        </div><!-- .pmbsweb-slider -->
+        <!-- Masked Navigation -->
+        <div class="pmbsweb-slider-nav pmbsweb-masked-content at-bottom-right">
+            <a href="#" class="pmbsweb-slider-prev">
+                <span class="pmbsweb-icon pmbsweb-icon-chevron-left"></span>
+            </a>
+            <a href="#" class="pmbsweb-slider-next">
+                <span class="pmbsweb-icon pmbsweb-icon-chevron-right"></span>
+            </a>
+        </div>
+    </div>
+    {% endif %}
+
+    <!-- Meta -->
+    <div class="pmbsweb-hero-info-line" data-stagger-appear="fade-up" data-delay="200" data-unload="fade-up">
+        <div class="pmbsweb-meta"><i class="fa-duotone fa-light fa-icons fa-fade"></i>
+            Categories: <span>{% for category in page.categories limit: 2 %}
+                {{ category }}{% unless forloop.last %}, {% endunless %}
+                {% endfor %}</span>
+        </div>
+        <div class="pmbsweb-meta">{{ site.data.authors[page.author].usericon }}
+            Author: <span><a href="{{ site.data.authors[page.author].url }}">{{ site.data.authors[page.author].name }}</a></span>
+        </div>
+        <div class="pmbsweb-meta"><i class="fa-duotone fa-solid fa-calendar-week fa-fade"></i>
+            Date: <span>{{ page.date | date: "%B %d, %Y" }}</span>
+        </div>
+    </div><!-- .pmbsweb-hero-info-line -->
+</section>

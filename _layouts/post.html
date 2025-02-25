@@ -15,45 +15,8 @@
     <hr/>
     <main class="pmbsweb-main">
         <div class="stg-container">
-            <!-- <h1>{{ page.title }}</h1>
-            <p class="post-meta">
-                <i class=""></i>
-                <time datetime="{{ page.date | date_to_xmlschema }}">{{ page.date | date: site.date_format }}</time>
-                {% if page.author %}
-                    • <span>{{ page.author }}</span>
-                {% endif %}
-            </p>
-
-            {{ content }}
-
-            <hr/> -->
-
-            <article>
-                <header>
-                  <h1>{{ page.title }}</h1>
-                  <p class="post-meta">
-                    <i class="fa-duotone fa-solid fa-calendar-days fa-fade"></i> {{ page.date | date: "%B %d, %Y" }} | {{ site.data.authors[page.author].usericon }}
-                    <a href="{{ site.data.authors[page.author].url }}">{{ site.data.authors[page.author].name }}</a>
-                  </p>
-                </header><br/>
-              
-                <div class="post-content">
-                  {{ content }}
-                </div>
-              
-                <!-- <footer>
-                    <p>Categories:
-                      {% for category in page.categories %}
-                        <a href="{{ site.baseurl }}{{ '/category/' | append: category | slugify }}/">{{ category }}</a>
-                      {% endfor %}
-                    </p>
-                    <p>Tags:
-                      {% for tag in page.tags %}
-                        <a href="{{ site.baseurl }}{{ '/tag/' | append: tag | slugify }}/">{{ tag }}</a>
-                      {% endfor %}
-                    </p>
-                  </footer> -->
-              </article>
+          {% include postTitleDescription.html %}
+          {{ content }}
         </div>
     </main>
     <hr/>
