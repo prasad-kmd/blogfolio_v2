@@ -3,6 +3,9 @@ baseurl: "" # the subpath of your site, e.g. /blog
 title: PrasadM # the name of your site, e.g. ACME Corp.
 description: A blog about web development, technology, and the latest trends.
 
+telegram_token: "<%= ENV['TELEGRAM_TOKEN'] %>"
+telegram_chat_id: "<%= ENV['TELEGRAM_CHAT_ID'] %>"
+
 # plugins:
 #   - jekyll-archives
 

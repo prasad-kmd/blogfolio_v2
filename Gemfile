@@ -5,6 +5,7 @@ gem "jekyll-paginate"
 gem "csv"
 gem "base64"
 gem "logger"
+gem 'dotenv'
 gem 'jekyll-archives'
 gem 'jekyll-sitemap'
 group :jekyll_plugins do
