@@ -1,0 +1,26 @@
+<!-- Section: Grid -->
+<section>
+    <!-- Portfolio Grid -->
+    <div class="pmbsweb-grid-3cols pmbsweb-tp-grid-2cols pmbsweb-tp-centered-last-item stg-normal-gap pmbsweb-parallax-media" data-stagger-appear="fade-up" data-threshold="0.5" data-stagger-delay="150" data-stagger-unload="fade-up">
+        {% for post in site.posts %}
+        <!-- Portfolio Card Item 01 -->
+        <div class="pmbsweb-block pmbsweb-portfolio-card">
+            <div class="pmbsweb-portfolio-card-image">
+                <img class="pmbsweb-lazy" src="img/null.png" data-src="{{ post.thumbnail }}" alt="{{ post.title }}" width="1200" height="1200">
+            </div>
+            <div class="pmbsweb-portfolio-card-footer">
+                <div class="pmbsweb-portfolio-card-title">
+                    <span class="pmbsweb-meta">
+                        {% for category in post.categories limit: 2 %}
+                            {{ category }}{% unless forloop.last %}, {% endunless %}
+                            {% endfor %}
+                    </span>
+                    <h6>{{ post.title | truncate: 20 }}</h6>
+                </div>
+                <span class="pmbsweb-icon pmbsweb-icon-explore"></span>
+            </div>
+            <a href="{{ post.url | relative_url }}"></a>
+        </div><!-- .pmbsweb-portfolio-card -->
+        {% endfor %}                   
+    </div><!-- .pmbsweb-grid -->
+</section>
