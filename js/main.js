@@ -1107,8 +1107,8 @@ jQuery(function ($) {
                 result = false;
             } else if ( this_href === '#' ) {
                 result = false;
-            } else if ( $el.attr('target') && '_blank' === $this.attr('target') ) {
-                result = false;
+            } else if ( $el.attr('target') && '_blank' === $el.attr('target') ) {
+                result = true;
             } else if ( this_href.indexOf('elementor-action') > -1 ) {
                 result = false;
             } else if ( $el.is('[download]') ) {

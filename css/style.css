@@ -1461,6 +1461,30 @@ ul.pmbsweb-socials-list.stg-xl-gap {
     -webkit-mask-image: var(--icon-social-youtube);
     mask-image: var(--icon-social-youtube);
 }
+.pmbsweb-socials-medium i{
+    -webkit-mask-image: var(--icon-social-medium);
+    mask-image: var(--icon-social-medium);
+}
+.pmbsweb-socials-github i{
+    -webkit-mask-image: var(--icon-social-github);
+    mask-image: var(--icon-social-github);
+}
+.pmbsweb-socials-blogger i{
+    -webkit-mask-image: var(--icon-social-blogger);
+    mask-image: var(--icon-social-blogger);
+}
+.pmbsweb-socials-google-maps i{
+    -webkit-mask-image: var(--icon-social-google-maps);
+    mask-image: var(--icon-social-google-maps);
+}
+.pmbsweb-socials-telegram i{
+    -webkit-mask-image: var(--icon-social-telegram);
+    mask-image: var(--icon-social-telegram);
+}
+.pmbsweb-socials-researchgate i{
+    -webkit-mask-image: var(--icon-social-researchgate);
+    mask-image: var(--icon-social-researchgate);
+}
 /* Framed Socials */
 .pmbsweb-socials-list.pmbsweb-framed-socials {
     flex-wrap: wrap;

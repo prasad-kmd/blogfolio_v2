@@ -6,6 +6,12 @@ description: A blog about web development, technology, and the latest trends.
 telegram_token: "<%= ENV['TELEGRAM_TOKEN'] %>"
 telegram_chat_id: "<%= ENV['TELEGRAM_CHAT_ID'] %>"
 
+linkedin: https://linkedin.com/in/prasad-madhuranga
+github: https://github.com/Prasad-kmd
+medium: https://medium.com/@prasadmadhuranga
+telegram: https://t.me/prasad_kmd
+google-maps: https://maps.app.goo.gl/TULghYW9Ta8Tn3Jd9
+researchgate: https://www.researchgate.net/profile/Prasad-Madhuranga
 # plugins:
 #   - jekyll-archives
 
