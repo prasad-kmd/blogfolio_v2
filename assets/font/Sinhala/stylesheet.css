@@ -1,12 +1,8 @@
 @font-face {
     font-family: 'Abhaya Libre';
-    src: url('AbhayaLibre-Bold.eot');
     src: local('Abhaya Libre Bold'), local('AbhayaLibre-Bold'),
-        url('AbhayaLibre-Bold.eot?#iefix') format('embedded-opentype'),
         url('AbhayaLibre-Bold.woff2') format('woff2'),
-        url('AbhayaLibre-Bold.woff') format('woff'),
-        url('AbhayaLibre-Bold.ttf') format('truetype'),
-        url('AbhayaLibre-Bold.svg#AbhayaLibre-Bold') format('svg');
+        url('AbhayaLibre-Bold.woff') format('woff');
     font-weight: bold;
     font-style: normal;
     font-display: swap;
@@ -14,13 +10,9 @@
 
 @font-face {
     font-family: 'Abhaya Libre';
-    src: url('AbhayaLibre-Medium.eot');
     src: local('Abhaya Libre Medium'), local('AbhayaLibre-Medium'),
-        url('AbhayaLibre-Medium.eot?#iefix') format('embedded-opentype'),
         url('AbhayaLibre-Medium.woff2') format('woff2'),
-        url('AbhayaLibre-Medium.woff') format('woff'),
-        url('AbhayaLibre-Medium.ttf') format('truetype'),
-        url('AbhayaLibre-Medium.svg#AbhayaLibre-Medium') format('svg');
+        url('AbhayaLibre-Medium.woff') format('woff');
     font-weight: 500;
     font-style: normal;
     font-display: swap;
@@ -28,13 +20,9 @@
 
 @font-face {
     font-family: 'Abhaya Libre';
-    src: url('AbhayaLibre-SemiBold.eot');
     src: local('Abhaya Libre SemiBold'), local('AbhayaLibre-SemiBold'),
-        url('AbhayaLibre-SemiBold.eot?#iefix') format('embedded-opentype'),
         url('AbhayaLibre-SemiBold.woff2') format('woff2'),
-        url('AbhayaLibre-SemiBold.woff') format('woff'),
-        url('AbhayaLibre-SemiBold.ttf') format('truetype'),
-        url('AbhayaLibre-SemiBold.svg#AbhayaLibre-SemiBold') format('svg');
+        url('AbhayaLibre-SemiBold.woff') format('woff');
     font-weight: 600;
     font-style: normal;
     font-display: swap;
@@ -42,13 +30,9 @@
 
 @font-face {
     font-family: 'Abhaya Libre';
-    src: url('AbhayaLibre-ExtraBold.eot');
     src: local('Abhaya Libre ExtraBold'), local('AbhayaLibre-ExtraBold'),
-        url('AbhayaLibre-ExtraBold.eot?#iefix') format('embedded-opentype'),
         url('AbhayaLibre-ExtraBold.woff2') format('woff2'),
-        url('AbhayaLibre-ExtraBold.woff') format('woff'),
-        url('AbhayaLibre-ExtraBold.ttf') format('truetype'),
-        url('AbhayaLibre-ExtraBold.svg#AbhayaLibre-ExtraBold') format('svg');
+        url('AbhayaLibre-ExtraBold.woff') format('woff');
     font-weight: bold;
     font-style: normal;
     font-display: swap;
@@ -56,13 +40,9 @@
 
 @font-face {
     font-family: 'Abhaya Libre';
-    src: url('AbhayaLibre-Regular.eot');
     src: local('Abhaya Libre Regular'), local('AbhayaLibre-Regular'),
-        url('AbhayaLibre-Regular.eot?#iefix') format('embedded-opentype'),
         url('AbhayaLibre-Regular.woff2') format('woff2'),
-        url('AbhayaLibre-Regular.woff') format('woff'),
-        url('AbhayaLibre-Regular.ttf') format('truetype'),
-        url('AbhayaLibre-Regular.svg#AbhayaLibre-Regular') format('svg');
+        url('AbhayaLibre-Regular.woff') format('woff');
     font-weight: normal;
     font-style: normal;
     font-display: swap;
@@ -74,9 +54,7 @@
     src: local('UN-Arundathee'),
         url('UN-Arundathee.eot?#iefix') format('embedded-opentype'),
         url('UN-Arundathee.woff2') format('woff2'),
-        url('UN-Arundathee.woff') format('woff'),
-        url('UN-Arundathee.ttf') format('truetype'),
-        url('UN-Arundathee.svg#UN-Arundathee') format('svg');
+        url('UN-Arundathee.woff') format('woff');
     font-weight: normal;
     font-style: normal;
     font-display: swap;
@@ -84,13 +62,9 @@
 
 @font-face {
     font-family: 'UN-Davasa';
-    src: url('UN-Davasa.eot');
     src: local('UN-Davasa'),
-        url('UN-Davasa.eot?#iefix') format('embedded-opentype'),
         url('UN-Davasa.woff2') format('woff2'),
-        url('UN-Davasa.woff') format('woff'),
-        url('UN-Davasa.ttf') format('truetype'),
-        url('UN-Davasa.svg#UN-Davasa') format('svg');
+        url('UN-Davasa.woff') format('woff');
     font-weight: 300;
     font-style: normal;
     font-display: swap;
@@ -98,13 +72,9 @@
 
 @font-face {
     font-family: 'UN-Bindumathi';
-    src: url('UN-Bindumathi.eot');
     src: local('UN-Bindumathi'),
-        url('UN-Bindumathi.eot?#iefix') format('embedded-opentype'),
         url('UN-Bindumathi.woff2') format('woff2'),
-        url('UN-Bindumathi.woff') format('woff'),
-        url('UN-Bindumathi.ttf') format('truetype'),
-        url('UN-Bindumathi.svg#UN-Bindumathi') format('svg');
+        url('UN-Bindumathi.woff') format('woff');
     font-weight: bold;
     font-style: normal;
     font-display: swap;
@@ -112,13 +82,9 @@
 
 @font-face {
     font-family: 'UN-Abhaya';
-    src: url('UN-Abhaya.eot');
     src: local('UN-Abhaya'),
-        url('UN-Abhaya.eot?#iefix') format('embedded-opentype'),
         url('UN-Abhaya.woff2') format('woff2'),
-        url('UN-Abhaya.woff') format('woff'),
-        url('UN-Abhaya.ttf') format('truetype'),
-        url('UN-Abhaya.svg#UN-Abhaya') format('svg');
+        url('UN-Abhaya.woff') format('woff');
     font-weight: normal;
     font-style: normal;
     font-display: swap;
@@ -126,13 +92,9 @@
 
 @font-face {
     font-family: 'Noto Serif Sinhala';
-    src: url('NotoSerifSinhala-Regular.eot');
     src: local('Noto Serif Sinhala Regular'), local('NotoSerifSinhala-Regular'),
-        url('NotoSerifSinhala-Regular.eot?#iefix') format('embedded-opentype'),
         url('NotoSerifSinhala-Regular.woff2') format('woff2'),
-        url('NotoSerifSinhala-Regular.woff') format('woff'),
-        url('NotoSerifSinhala-Regular.ttf') format('truetype'),
-        url('NotoSerifSinhala-Regular.svg#NotoSerifSinhala-Regular') format('svg');
+        url('NotoSerifSinhala-Regular.woff') format('woff');
     font-weight: normal;
     font-style: normal;
     font-display: swap;
@@ -140,13 +102,9 @@
 
 @font-face {
     font-family: 'UN-Alakamanda';
-    src: url('UN-Alakamanda.eot');
     src: local('UN-Alakamanda'),
-        url('UN-Alakamanda.eot?#iefix') format('embedded-opentype'),
         url('UN-Alakamanda.woff2') format('woff2'),
-        url('UN-Alakamanda.woff') format('woff'),
-        url('UN-Alakamanda.ttf') format('truetype'),
-        url('UN-Alakamanda.svg#UN-Alakamanda') format('svg');
+        url('UN-Alakamanda.woff') format('woff');
     font-weight: normal;
     font-style: normal;
     font-display: swap;
@@ -154,13 +112,9 @@
 
 @font-face {
     font-family: 'UN-Abhaya';
-    src: url('UN-AbhayaBold.eot');
     src: local('UN-Abhaya Bold'), local('UN-AbhayaBold'),
-        url('UN-AbhayaBold.eot?#iefix') format('embedded-opentype'),
         url('UN-AbhayaBold.woff2') format('woff2'),
-        url('UN-AbhayaBold.woff') format('woff'),
-        url('UN-AbhayaBold.ttf') format('truetype'),
-        url('UN-AbhayaBold.svg#UN-AbhayaBold') format('svg');
+        url('UN-AbhayaBold.woff') format('woff');
     font-weight: bold;
     font-style: normal;
     font-display: swap;
@@ -168,13 +122,9 @@
 
 @font-face {
     font-family: 'UN-Basuru';
-    src: url('UN-Basuru.eot');
     src: local('UN-Basuru'),
-        url('UN-Basuru.eot?#iefix') format('embedded-opentype'),
         url('UN-Basuru.woff2') format('woff2'),
-        url('UN-Basuru.woff') format('woff'),
-        url('UN-Basuru.ttf') format('truetype'),
-        url('UN-Basuru.svg#UN-Basuru') format('svg');
+        url('UN-Basuru.woff') format('woff');
     font-weight: bold;
     font-style: normal;
     font-display: swap;
@@ -182,13 +132,9 @@
 
 @font-face {
     font-family: 'UN-Dharanee';
-    src: url('UN-Dharanee.eot');
     src: local('UN-Dharanee'),
-        url('UN-Dharanee.eot?#iefix') format('embedded-opentype'),
         url('UN-Dharanee.woff2') format('woff2'),
-        url('UN-Dharanee.woff') format('woff'),
-        url('UN-Dharanee.ttf') format('truetype'),
-        url('UN-Dharanee.svg#UN-Dharanee') format('svg');
+        url('UN-Dharanee.woff') format('woff');
     font-weight: 300;
     font-style: normal;
     font-display: swap;
@@ -196,13 +142,9 @@
 
 @font-face {
     font-family: 'UN-Derana';
-    src: url('UN-Derana.eot');
     src: local('UN-Derana'),
-        url('UN-Derana.eot?#iefix') format('embedded-opentype'),
         url('UN-Derana.woff2') format('woff2'),
-        url('UN-Derana.woff') format('woff'),
-        url('UN-Derana.ttf') format('truetype'),
-        url('UN-Derana.svg#UN-Derana') format('svg');
+        url('UN-Derana.woff') format('woff');
     font-weight: bold;
     font-style: normal;
     font-display: swap;
@@ -210,13 +152,9 @@
 
 @font-face {
     font-family: 'UN-Gurulugomi';
-    src: url('UN-Gurulugomi.eot');
     src: local('UN-Gurulugomi'),
-        url('UN-Gurulugomi.eot?#iefix') format('embedded-opentype'),
         url('UN-Gurulugomi.woff2') format('woff2'),
-        url('UN-Gurulugomi.woff') format('woff'),
-        url('UN-Gurulugomi.ttf') format('truetype'),
-        url('UN-Gurulugomi.svg#UN-Gurulugomi') format('svg');
+        url('UN-Gurulugomi.woff') format('woff');
     font-weight: 300;
     font-style: normal;
     font-display: swap;
@@ -224,13 +162,9 @@
 
 @font-face {
     font-family: 'UN-Ganganee';
-    src: url('UN-Ganganee.eot');
     src: local('UN-Ganganee'),
-        url('UN-Ganganee.eot?#iefix') format('embedded-opentype'),
         url('UN-Ganganee.woff2') format('woff2'),
-        url('UN-Ganganee.woff') format('woff'),
-        url('UN-Ganganee.ttf') format('truetype'),
-        url('UN-Ganganee.svg#UN-Ganganee') format('svg');
+        url('UN-Ganganee.woff') format('woff');
     font-weight: bold;
     font-style: normal;
     font-display: swap;
@@ -238,13 +172,9 @@
 
 @font-face {
     font-family: 'UN-Imanee';
-    src: url('UN-Imanee.eot');
     src: local('UN-Imanee'),
-        url('UN-Imanee.eot?#iefix') format('embedded-opentype'),
         url('UN-Imanee.woff2') format('woff2'),
-        url('UN-Imanee.woff') format('woff'),
-        url('UN-Imanee.ttf') format('truetype'),
-        url('UN-Imanee.svg#UN-Imanee') format('svg');
+        url('UN-Imanee.woff') format('woff');
     font-weight: bold;
     font-style: normal;
     font-display: swap;
@@ -252,13 +182,9 @@
 
 @font-face {
     font-family: 'UN-Indeevaree';
-    src: url('UN-Indeevaree.eot');
     src: local('UN-Indeevaree'),
-        url('UN-Indeevaree.eot?#iefix') format('embedded-opentype'),
         url('UN-Indeevaree.woff2') format('woff2'),
-        url('UN-Indeevaree.woff') format('woff'),
-        url('UN-Indeevaree.ttf') format('truetype'),
-        url('UN-Indeevaree.svg#UN-Indeevaree') format('svg');
+        url('UN-Indeevaree.woff') format('woff');
     font-weight: 300;
     font-style: normal;
     font-display: swap;
@@ -266,13 +192,9 @@
 
 @font-face {
     font-family: 'UN-Disapamok';
-    src: url('UN-Disapamok.eot');
     src: local('UN-Disapamok'),
-        url('UN-Disapamok.eot?#iefix') format('embedded-opentype'),
         url('UN-Disapamok.woff2') format('woff2'),
-        url('UN-Disapamok.woff') format('woff'),
-        url('UN-Disapamok.ttf') format('truetype'),
-        url('UN-Disapamok.svg#UN-Disapamok') format('svg');
+        url('UN-Disapamok.woff') format('woff');
     font-weight: 300;
     font-style: normal;
     font-display: swap;
@@ -280,13 +202,9 @@
 
 @font-face {
     font-family: 'UN-Gemunu';
-    src: url('UN-Gemunu.eot');
     src: local('UN-Gemunu'),
-        url('UN-Gemunu.eot?#iefix') format('embedded-opentype'),
         url('UN-Gemunu.woff2') format('woff2'),
-        url('UN-Gemunu.woff') format('woff'),
-        url('UN-Gemunu.ttf') format('truetype'),
-        url('UN-Gemunu.svg#UN-Gemunu') format('svg');
+        url('UN-Gemunu.woff') format('woff');
     font-weight: bold;
     font-style: normal;
     font-display: swap;
@@ -294,13 +212,9 @@
 
 @font-face {
     font-family: 'UN-Malithi';
-    src: url('UN-Malithi.eot');
     src: local('UN-Malithi'),
-        url('UN-Malithi.eot?#iefix') format('embedded-opentype'),
         url('UN-Malithi.woff2') format('woff2'),
-        url('UN-Malithi.woff') format('woff'),
-        url('UN-Malithi.ttf') format('truetype'),
-        url('UN-Malithi.svg#UN-Malithi') format('svg');
+        url('UN-Malithi.woff') format('woff');
     font-weight: normal;
     font-style: normal;
     font-display: swap;
@@ -308,13 +222,9 @@
 
 @font-face {
     font-family: 'UN-Rashmi';
-    src: url('UN-Rashmi.eot');
     src: local('UN-Rashmi'),
-        url('UN-Rashmi.eot?#iefix') format('embedded-opentype'),
         url('UN-Rashmi.woff2') format('woff2'),
-        url('UN-Rashmi.woff') format('woff'),
-        url('UN-Rashmi.ttf') format('truetype'),
-        url('UN-Rashmi.svg#UN-Rashmi') format('svg');
+        url('UN-Rashmi.woff') format('woff');
     font-weight: bold;
     font-style: normal;
     font-display: swap;
@@ -322,13 +232,9 @@
 
 @font-face {
     font-family: 'UN-Samantha';
-    src: url('UN-Samantha.eot');
     src: local('UN-Samantha'),
-        url('UN-Samantha.eot?#iefix') format('embedded-opentype'),
         url('UN-Samantha.woff2') format('woff2'),
-        url('UN-Samantha.woff') format('woff'),
-        url('UN-Samantha.ttf') format('truetype'),
-        url('UN-Samantha.svg#UN-Samantha') format('svg');
+        url('UN-Samantha.woff') format('woff');
     font-weight: bold;
     font-style: normal;
     font-display: swap;
@@ -336,13 +242,9 @@
 
 @font-face {
     font-family: 'UN-Sandhyanee';
-    src: url('UN-Sandhyanee.eot');
     src: local('UN-Sandhyanee'),
-        url('UN-Sandhyanee.eot?#iefix') format('embedded-opentype'),
         url('UN-Sandhyanee.woff2') format('woff2'),
-        url('UN-Sandhyanee.woff') format('woff'),
-        url('UN-Sandhyanee.ttf') format('truetype'),
-        url('UN-Sandhyanee.svg#UN-Sandhyanee') format('svg');
+        url('UN-Sandhyanee.woff') format('woff');
     font-weight: bold;
     font-style: normal;
     font-display: swap;
@@ -350,13 +252,9 @@
 
 @font-face {
     font-family: 'UN-Rajantha';
-    src: url('UN-Rajantha.eot');
     src: local('UN-Rajantha'),
-        url('UN-Rajantha.eot?#iefix') format('embedded-opentype'),
         url('UN-Rajantha.woff2') format('woff2'),
-        url('UN-Rajantha.woff') format('woff'),
-        url('UN-Rajantha.ttf') format('truetype'),
-        url('UN-Rajantha.svg#UN-Rajantha') format('svg');
+        url('UN-Rajantha.woff') format('woff');
     font-weight: bold;
     font-style: normal;
     font-display: swap;
@@ -364,13 +262,9 @@
 
 @font-face {
     font-family: 'UN-Isiwara';
-    src: url('UN-Isiwara.eot');
     src: local('UN-Isiwara'),
-        url('UN-Isiwara.eot?#iefix') format('embedded-opentype'),
         url('UN-Isiwara.woff2') format('woff2'),
-        url('UN-Isiwara.woff') format('woff'),
-        url('UN-Isiwara.ttf') format('truetype'),
-        url('UN-Isiwara.svg#UN-Isiwara') format('svg');
+        url('UN-Isiwara.woff') format('woff');
     font-weight: 300;
     font-style: normal;
     font-display: swap;
@@ -378,13 +272,9 @@
 
 @font-face {
     font-family: 'Yaldevi';
-    src: url('Yaldevi-Light.eot');
     src: local('Yaldevi Light'), local('Yaldevi-Light'),
-        url('Yaldevi-Light.eot?#iefix') format('embedded-opentype'),
         url('Yaldevi-Light.woff2') format('woff2'),
-        url('Yaldevi-Light.woff') format('woff'),
-        url('Yaldevi-Light.ttf') format('truetype'),
-        url('Yaldevi-Light.svg#Yaldevi-Light') format('svg');
+        url('Yaldevi-Light.woff') format('woff');
     font-weight: 300;
     font-style: normal;
     font-display: swap;
@@ -392,13 +282,9 @@
 
 @font-face {
     font-family: 'Yaldevi';
-    src: url('Yaldevi-Medium.eot');
     src: local('Yaldevi Medium'), local('Yaldevi-Medium'),
-        url('Yaldevi-Medium.eot?#iefix') format('embedded-opentype'),
         url('Yaldevi-Medium.woff2') format('woff2'),
-        url('Yaldevi-Medium.woff') format('woff'),
-        url('Yaldevi-Medium.ttf') format('truetype'),
-        url('Yaldevi-Medium.svg#Yaldevi-Medium') format('svg');
+        url('Yaldevi-Medium.woff') format('woff');
     font-weight: 500;
     font-style: normal;
     font-display: swap;
@@ -406,13 +292,9 @@
 
 @font-face {
     font-family: 'Yaldevi';
-    src: url('Yaldevi-Bold.eot');
     src: local('Yaldevi Bold'), local('Yaldevi-Bold'),
-        url('Yaldevi-Bold.eot?#iefix') format('embedded-opentype'),
         url('Yaldevi-Bold.woff2') format('woff2'),
-        url('Yaldevi-Bold.woff') format('woff'),
-        url('Yaldevi-Bold.ttf') format('truetype'),
-        url('Yaldevi-Bold.svg#Yaldevi-Bold') format('svg');
+        url('Yaldevi-Bold.woff') format('woff');
     font-weight: bold;
     font-style: normal;
     font-display: swap;
