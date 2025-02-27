@@ -1,13 +1,13 @@
 media:
   input: posts/img
-  output: posts/img
+  output: img
 content:
 - name: posts
   label: Posts
   type: collection
   path: '_posts'
   view:
-    fields: [ title, published, date, author, categories, tags, thumbnail, permalink, layout ]
+    fields: [ title, published, date, author, categories, tags, thumbnail, permalink, layout, description ]
   fields:
   - name: published
     label: Published
@@ -17,6 +17,9 @@ content:
   - name: date
     label: Date
     type: date
+    options:
+      format: yyyy-MM-dd HH:mm
+      min: 2025-01-01 00:00
     description: "The date of the post. This is used for sorting and displaying posts chronologically."
     required: true
   - name: layout
@@ -30,6 +33,10 @@ content:
     type: string
     description: "The title of the post. Keep it concise and engaging!"
     required: true
+  - name: description
+    label: Description
+    type: string
+    description: "The Description of the post. Keep it concise and engaging!"
   - name: author
     label: Author of the Post
     type: string
@@ -39,11 +46,11 @@ content:
   - name: categories
     label: Categories
     type: string
-    description: "Categories for the post. Separate multiple categories with commas."
+    description: "Categories for the post. Separate multiple categories with spaces."
   - name: tags
     label: Tags
     type: string
-    description: "Tags for the post. Separate multiple tags with commas."
+    description: "Tags for the post. Separate multiple tags with spaces."
   - name: thumbnail
     label: Thumbnail of the Post
     type: image
@@ -58,7 +65,12 @@ content:
     label: Body
     type: rich-text
     description: "The main content of the post. Use Markdown for formatting."
-    required: true
+  - name: body
+    label: Body (in HTML)
+    type: code
+    options:
+      language: html
+    description: "The main content of the post. Use HTML for formatting."
 - name: config
   label: Jekyll config
   path: _config.yml
