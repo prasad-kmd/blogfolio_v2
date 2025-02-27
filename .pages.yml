@@ -1,0 +1,48 @@
+media: media
+content:
+  - name: posts
+    label: Posts
+    type: collection
+    path: '_posts'
+    view:
+      fields: [ title, published, date ]
+    fields:
+      - name: published
+        label: Published
+        type: boolean
+        default: true
+        hint: "Set to 'true' to publish this post.  If unchecked, the post will be a draft."
+      - name: date
+        label: Date
+        type: date
+        hint: "The date of the post. This is used for sorting and displaying posts chronologically."
+      - name: title
+        label: Title
+        type: string
+        hint: "The title of the post. Keep it concise and engaging!"
+      - name: body
+        label: Body
+        type: rich-text
+        hint: "The main content of the post. Use Markdown for formatting."
+  - name: config
+    label: Jekyll config
+    path: _config.yml
+    type: file
+    fields:
+      - name: title
+        label: Website title
+        type: string
+        hint: "The main title of your website. This is used in the browser tab and in some SEO descriptions."
+      - name: description
+        label: Website description
+        type: string
+        description: "A short description of your website (around 150-160 characters). This is used in search engine results and social media previews for the homepage."
+      - name: url
+        label: Website URL
+        type: string
+        pattern: ^(https?:\/\/)?(www\.)?[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}(\/[^\s]*)?$
+        hint: "The full URL of your website (e.g., https://www.example.com). Make sure to include 'https://' if your site uses HTTPS."
+      - name: cover
+        label: Preview image
+        type: image
+        description: "Image used in the social preview on social networks (e.g. Facebook, Twitter...). Choose an image that represents your brand or the content of the page."
