@@ -7,25 +7,58 @@ content:
   type: collection
   path: '_posts'
   view:
-    fields: [ title, published, date ]
+    fields: [ title, published, date, author, categories, tags, thumbnail, permalink, layout ]
   fields:
   - name: published
     label: Published
     type: boolean
     default: true
-    hint: "Set to 'true' to publish this post.  If unchecked, the post will be a draft."
+    description: "Set to 'true' to publish this post.  If unchecked, the post will be a draft."
   - name: date
     label: Date
     type: date
-    hint: "The date of the post. This is used for sorting and displaying posts chronologically."
+    description: "The date of the post. This is used for sorting and displaying posts chronologically."
+    required: true
+  - name: layout
+    label: Layout for the Post
+    type: string
+    description: "The layout template to be used for this post. This should match one of the layout files in your Jekyll site. Use Post Layout for better results."
+    required: true
+    default: post
   - name: title
     label: Title
     type: string
-    hint: "The title of the post. Keep it concise and engaging!"
+    description: "The title of the post. Keep it concise and engaging!"
+    required: true
+  - name: author
+    label: Author of the Post
+    type: string
+    description: "The author of the post. This can be the name of the person who wrote the post.Should be matched with _data/authors.yml"
+    default: "Prasad"
+    required: true
+  - name: categories
+    label: Categories
+    type: string
+    description: "Categories for the post. Separate multiple categories with commas."
+  - name: tags
+    label: Tags
+    type: string
+    description: "Tags for the post. Separate multiple tags with commas."
+  - name: thumbnail
+    label: Thumbnail of the Post
+    type: image
+    description: "The thumbnail image for the post. This image will be displayed as a preview for the post. Use 1:1 image for better results."
+  - name: permalink
+    label: Permalink for the Post
+    type: string
+    description: "The permalink for the post. This should be a unique URL path for the post, following the specified format for SEO-friendly URLs. For better results, ensure that the permalink follows the format: /posts/:title-:year:month:day_:hour:minute:second:output_ext"
+    default: "/posts/:title-:year:month:day_:hour:minute:second:output_ext"
+    required: true
   - name: body
     label: Body
     type: rich-text
-    hint: "The main content of the post. Use Markdown for formatting."
+    description: "The main content of the post. Use Markdown for formatting."
+    required: true
 - name: config
   label: Jekyll config
   path: _config.yml
