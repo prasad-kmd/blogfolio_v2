@@ -16,6 +16,6 @@ permalink: /posts/:title-:year:month:day_:hour:minute:second:output_ext
 <html></html>
 ```
 
-![](posts/img/127.0.0.1_4000_.webp)
+![](../posts/img/127.0.0.1_4000_.webp)
 
-![](posts/img/logo.webp)
+![](../posts/img/logo.webp)

@@ -19,7 +19,6 @@ content:
     type: date
     options:
       format: yyyy-MM-dd HH:mm
-      min: 2025-01-01 00:00
     description: "The date of the post. This is used for sorting and displaying posts chronologically."
     required: true
   - name: layout
