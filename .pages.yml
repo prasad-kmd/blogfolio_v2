@@ -24,9 +24,7 @@ content:
   - name: date
     label: Date
     type: string
-    options:
-      format: yyyy-MM-dd HH:mm:ss
-    description: "The date of the post. This is used for sorting and displaying posts chronologically. Format: yyyy-MM-dd HH:mm:ss "
+    description: "The date of the post. This is used for sorting and displaying posts chronologically. Format: yyyy-MM-dd HH:mm:ss +0530 . 24 Hour Format. "
   - name: layout
     label: Layout for the Post
     type: string

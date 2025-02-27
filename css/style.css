@@ -2338,6 +2338,7 @@ a.pmbsweb-arrow-link {
     flex-wrap: nowrap;
     width: max-content;
     will-change: transform;
+    animation-duration: 10s !important;
 }
 .pmbsweb-marquee.is-init .pmbsweb-marquee-inner {
     animation: marquee_scroll 5s infinite linear;
