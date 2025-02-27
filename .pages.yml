@@ -50,10 +50,21 @@ content:
     label: Tags
     type: string
     description: "Tags for the post. Separate multiple tags with spaces."
+  - name: latex
+    label: Enable LaTeX Supports
+    type: boolean
+    description: "Enable LaTeX support for mathematical equations and symbols in the post."
+    default: false
+  - name: highlightjs
+    label: Enable highlightJS Supports
+    type: boolean
+    description: "Enable highlight.js support for syntax highlighting in code blocks within the post. Use <pre><code> for insert code. Make sure inserting code is parsered."
+    default: false
   - name: thumbnail
     label: Thumbnail of the Post
-    type: image
-    description: "The thumbnail image for the post. This image will be displayed as a preview for the post. Use 1:1 image for better results."
+    type: string
+    description: "The thumbnail image for the post. This image will be displayed as a preview for the post.Should be use relative URL to the root. Use 1:1 image for better results."
+    default: "/posts/img/logo.webp"
   - name: permalink
     label: Permalink for the Post
     type: string
