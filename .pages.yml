@@ -94,6 +94,12 @@ content:
     label: Website title
     type: string
     description: "The main title of your website. This is used in the browser tab and in some SEO descriptions."
+    default: "PrasadM's Blogfolio"
+  - name: name
+    label: Website Name
+    type: string
+    description: "Custom Name of the Site. Used in About Me."
+    default: "Prasad Madhuranga"
   - name: description
     label: Website description
     type: string
@@ -103,6 +109,17 @@ content:
     type: string
     pattern: ^(https?:\/\/)?(www\.)?[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}(\/[^\s]*)?$
     description: "The full URL of your website (e.g., https://www.example.com). Make sure to include 'https://' if your site uses HTTPS."
+  - name: local
+    label: Any Name of Location
+    type: string
+    description: "Location Name that used in About Me."
+  - name: jobs
+    label: Any Name of Jobs
+    type: string
+    description: "Job Name that used in About Me."
+  - name: slogan
+    label: Your Slogan
+    type: string
   - name: cover
     label: Preview image
     type: image

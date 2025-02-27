@@ -12,10 +12,10 @@
         <div class="pmbsweb-header-mp">
             <nav class="pmbsweb-nav">
                 <ul class="main-menu" data-stagger-appear="fade-down" data-stagger-delay="75">
-                    <li class="current-menu-parent">
+                    <li {{ page.homepage }}>
                         <a href="../index.html">Home</a>
                     </li>
-                    <li>
+                    <li {{ page.aboutpage }}>
                         <a href="../about-me.html">About Me</a>
                     </li>
                     <li>
@@ -38,10 +38,10 @@
                             </li>
                         </ul>
                     </li>
-                    <li>
-                        <a href="#">Portfolio</a>
+                    <li {{ page.postpage }}>
+                        <a href="../posts.html">Blogs</a>
                     </li>
-                    <li>
+                    <li {{ page.contactpage }}>
                         <a href="../contacts.html">Contacts</a>
                     </li>
                 </ul>
