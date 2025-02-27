@@ -3,3 +3,13 @@ description: A blog about web development, technology, and the latest trends
   that featured by Prasad Madhuranga
 url: https://blogfolio-v2.vercel.app/
 cover: posts/img/127.0.0.1_4000_.webp
+
+telegram_token: "<%= ENV['TELEGRAM_TOKEN'] %>"
+telegram_chat_id: "<%= ENV['TELEGRAM_CHAT_ID'] %>"
+
+linkedin: https://linkedin.com/in/prasad-madhuranga
+github: https://github.com/Prasad-kmd
+medium: https://medium.com/@prasadmadhuranga
+telegram: https://t.me/prasad_kmd
+google-maps: https://maps.app.goo.gl/TULghYW9Ta8Tn3Jd9
+researchgate: https://www.researchgate.net/profile/Prasad-Madhuranga
