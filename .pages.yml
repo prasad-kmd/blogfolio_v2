@@ -7,7 +7,7 @@ content:
   type: collection
   path: '_posts'
   view:
-    fields: [ title, published, date, author, categories, tags, thumbnail, permalink, layout, description ]
+    fields: [ title, published, date, author, categories, tags, thumbnail, permalink, layout, description, latex, highlightjs ]
   fields:
   - name: published
     label: Published
@@ -21,6 +21,12 @@ content:
       format: yyyy-MM-dd HH:mm
     description: "The date of the post. This is used for sorting and displaying posts chronologically."
     required: true
+  - name: date
+    label: Date
+    type: string
+    options:
+      format: yyyy-MM-dd HH:mm:ss
+    description: "The date of the post. This is used for sorting and displaying posts chronologically. Format: yyyy-MM-dd HH:mm:ss "
   - name: layout
     label: Layout for the Post
     type: string
