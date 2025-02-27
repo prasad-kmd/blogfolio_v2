@@ -58,25 +58,25 @@ content:
     description: "Telegram Chat ID where all messages from Contact form should send."
   - name: linkedin
     label: LinkedIn Profile
-    type: url
+    type: string
     description: "Add LinkedIn Profile URL"
   - name: github
     label: GitHub Profile
-    type: url
+    type: string
     description: "Add GitHub Profile URL"
   - name: medium
     label: Medium Profile
-    type: url
+    type: string
     description: "Add Medium Profile URL"
   - name: telegram
     label: Telegram Profile
-    type: url
+    type: string
     description: "Add Telegram Channel URL"
   - name: google-maps
     label: Google Maps Profile
-    type: url
+    type: string
     description: "Add Google Maps Profile URL"
   - name: researchgate
     label: Research Gate Profile
-    type: url
+    type: string
     description: "Add Research Gate Profile URL"
