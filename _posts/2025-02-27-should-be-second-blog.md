@@ -1,6 +1,6 @@
 ---
 published: true
-date: 2025-02-27 00:00
+date: 2025-02-14 01:03:56
 layout: post
 title: Should be second Blog
 description: A blog about web development, technology, and the latest trends
