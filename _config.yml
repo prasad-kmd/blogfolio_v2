@@ -1,27 +1,5 @@
-url: "" # the base hostname & protocol for your site, e.g. http://example.com
-baseurl: "" # the subpath of your site, e.g. /blog
-title: PrasadM # the name of your site, e.g. ACME Corp.
-description: A blog about web development, technology, and the latest trends.
-
-telegram_token: "<%= ENV['TELEGRAM_TOKEN'] %>"
-telegram_chat_id: "<%= ENV['TELEGRAM_CHAT_ID'] %>"
-
-linkedin: https://linkedin.com/in/prasad-madhuranga
-github: https://github.com/Prasad-kmd
-medium: https://medium.com/@prasadmadhuranga
-telegram: https://t.me/prasad_kmd
-google-maps: https://maps.app.goo.gl/TULghYW9Ta8Tn3Jd9
-researchgate: https://www.researchgate.net/profile/Prasad-Madhuranga
-# plugins:
-#   - jekyll-archives
-
-# jekyll-archives:
-#   enabled:
-#     - categories
-#     - tags
-#   layouts:
-#     category: category
-#     tag: tag
-#   permalinks:
-#     category: '/category/:name/'
-#     tag: '/tag/:name/'
+title: PrasadM's Blogfolio
+description: A blog about web development, technology, and the latest trends
+  that featured by Prasad Madhuranga
+url: https://blogfolio-v2.vercel.app/
+cover: posts/img/127.0.0.1_4000_.webp
