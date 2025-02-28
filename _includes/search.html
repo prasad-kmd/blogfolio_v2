@@ -1,0 +1,95 @@
+<!-- Import lunr.js from unpkg.com -->
+<script src="https://unpkg.com/lunr/lunr.js"></script>
+
+<script>
+  {% assign counter = 0 %}
+  var documents = [{% for page in site.pages %}{% if page.url contains '.xml' or page.url contains 'assets' %}{% else %}{
+      "id": {{ counter }},
+      "url": "{{ site.url }}{{ page.url }}",
+      "title": "{{ page.title }}",
+      "body": "{{ page.content | markdownify | replace: '.', '. ' | replace: '</h2>', ': ' | replace: '</h3>', ': ' | replace: '</h4>', ': ' | replace: '</p>', ' ' | strip_html | strip_newlines | replace: '  ', ' ' | replace: '"', ' ' }}"{% assign counter = counter | plus: 1 %}
+      }, {% endif %}{% endfor %}{% for page in site.without-plugin %}{
+      "id": {{ counter }},
+      "url": "{{ site.url }}{{ page.url }}",
+      "title": "{{ page.title }}",
+      "body": "{{ page.content | markdownify | replace: '.', '. ' | replace: '</h2>', ': ' | replace: '</h3>', ': ' | replace: '</h4>', ': ' | replace: '</p>', ' ' | strip_html | strip_newlines | replace: '  ', ' ' | replace: '"', ' ' }}"{% assign counter = counter | plus: 1 %}
+      }, {% endfor %}{% for page in site.posts %}{
+      "id": {{ counter }},
+      "url": "{{ site.url }}{{ page.url }}",
+      "title": "{{ page.title }}",
+      "body": "{{ page.date | date: "%Y/%m/%d" }} - {{ page.content | markdownify | replace: '.', '. ' | replace: '</h2>', ': ' | replace: '</h3>', ': ' | replace: '</h4>', ': ' | replace: '</p>', ' ' | strip_html | strip_newlines | replace: '  ', ' ' | replace: '"', ' ' }}"{% assign counter = counter | plus: 1 %}
+      }{% if forloop.last %}{% else %}, {% endif %}{% endfor %}];
+  
+  var idx = lunr(function () {
+      this.ref('id')
+      this.field('title')
+      this.field('body')
+  
+      documents.forEach(function (doc) {
+          this.add(doc)
+      }, this)
+  });
+
+  function lunr_search(term) {
+      // Hide blog grid when search results are shown
+      document.getElementById('pmbsweb-main').classList.add('search-active');
+      
+      document.getElementById('blogGridContainer').innerHTML = '';
+      if(term) {
+          document.getElementById('blogGridContainer').innerHTML = "<h3>Search results for '" + term + "'</h3>";
+          var results = idx.search(term);
+          if(results.length>0){
+              for (var i = 0; i < results.length; i++) {
+                  var ref = results[i]['ref'];
+                  var url = documents[ref]['url'];
+                  var title = documents[ref]['title'];
+                  var excerpt = documents[ref]['body'].substring(0,160)+'...';
+                  var category = documents[ref]['title'].split(' ').slice(0,2).join(' '); // Split title into two words for category
+                  
+                  var resultHTML = `
+                  <div class="pmbsweb-faq-list">
+        <div class="pmbsweb-toggles-item pmbsweb-block" data-unload="fade-up">
+            <div class="pmbsweb-toggles-item--title">
+                <span class="pmbsweb-label">
+                    ${category}
+                </span>
+                <h4>
+                    <sup>
+                        ${i + 1}
+                    </sup>
+                    ${title}
+                </h4>
+            </div>
+            <div class="pmbsweb-toggles-item--content">
+                <p>
+                    ${excerpt}<a href="${url}"> Read more →</a>
+                </p>
+            </div>
+        </div>
+    </div>`;
+                  
+                  document.getElementById('blogGridContainer').innerHTML += resultHTML;
+              }
+          } else {
+              document.getElementById('blogGridContainer').innerHTML = "<div class='pmbsweb-toggles-item pmbsweb-block' data-unload='fade-up'><div class='pmbsweb-toggles-item--title'><span class='pmbsweb-label'>Nothing Here.</span><h4><sup>∞</sup>No Results !</h4></div><div class='pmbsweb-toggles-item--content'><p>Sorry, But We've got Nothing !</a></p></div></div>";
+          }
+      }
+      return false;
+  }
+
+  // Show blog grid when page loads
+  window.onload = function() {
+      document.getElementById('pmbsweb-main').classList.remove('search-active');
+  }
+</script>
+
+<style>
+    .pmbsweb-toggles-item {
+        margin-bottom: 20px;
+    }
+</style>
+
+<form onSubmit="return lunr_search(document.getElementById('lunrsearch').value);">
+    <p><input data-appear='fade-up' data-unload='fade-up' type="text" class="form-control" id="lunrsearch" name="q" maxlength="255" value="" placeholder="Search a Blog Post" /></p>
+</form>
+<div id="lunrsearchresults"></div>
