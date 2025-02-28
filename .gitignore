@@ -7,3 +7,4 @@ node_modules
 gem_install.yaml
 Gemfile.lock
 .env
+_ignored
