@@ -156,6 +156,10 @@ content:
     label: Research Gate Profile
     type: string
     description: "Add Research Gate Profile URL"
+  - name: experience
+    label: Years of Experience
+    type: number
+    description: "Add Years of Experience"
 - name: portfolio
   label: Portfolio
   type: collection

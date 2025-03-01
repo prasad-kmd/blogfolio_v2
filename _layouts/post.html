@@ -1,36 +1,43 @@
 <!DOCTYPE html>
-<html lang="{{ site.lang | default: "en-US" }}">
+<html lang="{{ site.lang | default: " en-US" }}">
+
 <head>
-    <head>
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <meta charset="utf-8">
-        {% include head.html %} 
-        <title>{{ page.title }} - {{ site.title }}</title>
-        <meta name="description" content="{% if page.description %}{{ page.description }}{% elsif post.description %}{{ post.description }}{% else %}{{ site.description }}{% endif %}">
-        <link rel="stylesheet" href="{{ "/assets/css/main.css" | relative_url }}">
-        {% include font.html %}
-        {% if page.latex %}
-          {% include KaTeX.html %}
-        {% endif %}
-        {% if page.highlightjs %}
-          {% include highlightjs.html %}
-        {% endif %}
-      </head>
+
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta charset="utf-8">
+    {% include head.html %}
+    <title>{{ page.title }} - {{ site.title }}</title>
+    <meta name="description"
+      content="{% if page.description %}{{ page.description }}{% elsif post.description %}{{ post.description }}{% else %}{{ site.description }}{% endif %}">
+    <link rel="stylesheet" href="{{ " /assets/css/main.css" | relative_url }}">
+    {% include font.html %}
+    {% if page.latex %}
+    {% include KaTeX.html %}
+    {% endif %}
+    {% if page.highlightjs %}
+    {% include highlightjs.html %}
+    {% endif %}
+  </head>
 </head>
+
 <body>
-    {% include header.html %}
-    <hr/>
-    <main class="pmbsweb-main">
-        <div class="stg-container">
-          {% include postTitleDescription.html %}
-          {{ content }}
-        </div>
-    </main>
-    <hr/>
-    <!-- <audio id="backgroundMusic" loop></audio> -->
-    {% include rcp.html %}
-    {% include backlight.html %}
-    {% include footer.html %}
-    {% include CookiesConsent.html %}
-  </body>
+  {% include header.html %}
+  <hr />
+  <main class="pmbsweb-main">
+    <div class="stg-container">
+      {% include postTitleDescription.html %}
+      <section data-appear="fade-zoom" data-unload="fade-down">
+        {{ content }}
+      </section>
+    </div>
+  </main>
+  <hr />
+  <!-- <audio id="backgroundMusic" loop></audio> -->
+  {% include rcp.html %}
+  {% include backlight.html %}
+  {% include footer.html %}
+  {% include CookiesConsent.html %}
+</body>
+
 </html>

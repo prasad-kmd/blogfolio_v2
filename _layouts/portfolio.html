@@ -27,7 +27,7 @@
     <main class="pmbsweb-main">
         <div class="stg-container">
             {% include portfolioTitleDescription.html %}
-            <section>
+            <section data-unload="zoom-out-down" data-appear="fade-up">
                 {{ content }}
             </section>
             {% assign sorted_portfolio = site.portfolio | sort: 'order' %}

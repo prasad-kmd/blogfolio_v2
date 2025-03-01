@@ -91,11 +91,8 @@
             <div class="stg-col-3 stg-tp-col-3 stg-m-col-6" data-appear="fade-up" data-delay="300"
                 data-unload="fade-up">
                 <div class="pmbsweb-counter pmbsweb-small-counter" data-delay="3000">
-                    {% assign current_year = 'now' | date: '%Y' | plus: 0 %}
-                    {% assign start_year = 2001 %}
-                    {% assign years_of_age = current_year | minus: start_year %}
-                    <div class="pmbsweb-counter-number" data-suffix="+">{{ years_of_age }}</div>
-                    <div class="pmbsweb-counter-label">Years of Age</div>
+                    <div class="pmbsweb-counter-number" data-suffix="+">{{ site.portfolio | size }}</div>
+                    <div class="pmbsweb-counter-label">Completed Projects</div>
                 </div><!-- .pmbsweb-counter -->
             </div>
             <div class="stg-col-6 stg-tp-col-6 stg-m-col-12 stg-m-top-gap" data-appear="fade-up" data-delay="400"
