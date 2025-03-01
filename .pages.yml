@@ -156,3 +156,81 @@ content:
     label: Research Gate Profile
     type: string
     description: "Add Research Gate Profile URL"
+- name: portfolio
+  label: Portfolio
+  type: collection
+  path: '_portfolio'
+  view:
+    fields: [ published, date, layout, title, description, tags, latex, highlightjs, thumbnail, permalink, body]
+  fields:
+  - name: published
+    label: Published
+    type: boolean
+    default: true
+    description: "Set to 'true' to publish this portfolio item."
+  - name: date
+    label: Date
+    type: date
+    options:
+      format: yyyy-MM-dd HH:mm
+    description: "The date of the portfolio."
+    required: true
+  - name: layout
+    label: Layout for the Portfolio
+    type: string
+    description: "The layout template to be used for this portfolio. This should match one of the layout files in your Jekyll site. Use appropiate Layout for better results."
+    required: true
+    default: post
+  - name: order
+    label: Number for the Portfolio
+    type: number
+    description: "Portfolio Number for sorting."
+    required: true
+  - name: title
+    label: Title
+    type: string
+    description: "The title of the portfolio. Keep it concise and engaging!"
+    required: true
+  - name: description
+    label: Description
+    type: string
+    description: "The Description of the portfolio. Keep it concise and engaging!"
+  - name: categories
+    label: Categories
+    type: string
+    description: "Categories for the portfolio. Separate multiple categories with spaces."
+  - name: tags
+    label: Tags
+    type: string
+    description: "Tags for the portfolio. Separate multiple tags with spaces."
+  - name: latex
+    label: Enable LaTeX Supports
+    type: boolean
+    description: "Enable LaTeX support for mathematical equations and symbols in the post."
+    default: false
+  - name: highlightjs
+    label: Enable highlightJS Supports
+    type: boolean
+    description: "Enable highlight.js support for syntax highlighting in code blocks within the post. Use <pre><code> for insert code. Make sure inserting code is parsered."
+    default: false
+  - name: thumbnail
+    label: Thumbnail of the Portfolio
+    type: string
+    description: "The thumbnail image for the post. This image will be displayed as a preview for the post.Should be use relative URL to the root. Use 1:1 image for better results."
+    default: "/posts/img/logo.webp"
+  - name: permalink
+    label: Permalink for the Portfolio
+    type: string
+    description: "The permalink for the post. This should be a unique URL path for the post, following the specified format for SEO-friendly URLs. For better results, ensure that the permalink follows the format: /portfolio/:title:output_ext"
+    default: "/portfolio/:title:output_ext"
+    required: true
+  - name: body
+    label: Body
+    type: rich-text
+    description: "The main content of the post. Use Markdown for formatting."
+  - name: body
+    label: Body (in HTML)
+    type: code
+    options:
+      language: html
+    description: "The main content of the post. Use HTML for formatting."

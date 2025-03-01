@@ -15,7 +15,7 @@
     <div class="swiper pmbsweb-carousel stg-bottom-gap-l" data-appear="fade-up" data-unload="fade-up" data-delay="200"
         data-count="4" data-m-count="1.5">
         <div class="swiper-wrapper">
-            {% for post in site.posts %}
+            {% for post in site.posts limit: 10 %}
             <!-- Card Item -->
             <div class="pmbsweb-block pmbsweb-portfolio-card swiper-slide">
                 <div class="pmbsweb-portfolio-card-image">

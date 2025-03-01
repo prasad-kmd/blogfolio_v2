@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="{{ site.lang | default: " en-US" }}">
+
+<head>
+
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta charset="utf-8">
+        {% include head.html %}
+        <title>{{ page.title }} - {{ site.title }}</title>
+        <meta name="description"
+            content="{% if page.description %}{{ page.description }}{% elsif portfolio.description %}{{ portfolio.description }}{% else %}{{ site.description }}{% endif %}">
+        <link rel="stylesheet" href="{{ " /assets/css/main.css" | relative_url }}">
+        {% include font.html %}
+        {% if page.latex %}
+        {% include KaTeX.html %}
+        {% endif %}
+        {% if page.highlightjs %}
+        {% include highlightjs.html %}
+        {% endif %}
+    </head>
+</head>
+
+<body>
+    {% include header.html %}
+    <hr />
+    <main class="pmbsweb-main">
+        <div class="stg-container">
+            {% include portfolioTitleDescription.html %}
+            <section>
+                {{ content }}
+            </section>
+            {% assign sorted_portfolio = site.portfolio | sort: 'order' %}
+            {% assign current_index = nil %}
+
+            {% for item in sorted_portfolio %}
+            {% if item.url == page.url %}
+            {% assign current_index = forloop.index0 %}
+            {% break %}
+            {% endif %}
+            {% endfor %}
+
+            {% assign next_index = current_index | plus: 1 %}
+
+            {% if next_index >= sorted_portfolio.size %}
+            {% assign next_index = 0 %} <!-- Loop back to the first project -->
+            {% endif %}
+
+            {% assign next_project = sorted_portfolio[next_index] %}
+
+            <!-- Section: Next Post -->
+            <section class="divider-top" data-appear="fade-up">
+                <div class="align-center" data-unload="zoom-in">
+                    <a href="{{ next_project.url }}" class="pmbsweb-icon-link pmbsweb-next-post">
+                        <div class="pmbsweb-icon-link-content">
+                            <h6>Next Project</h6>
+                            <h2>{{ next_project.title }}</h2>
+                        </div>
+                        <div class="pmbsweb-icon-wrap">
+                            <i class="pmbsweb-icon pmbsweb-icon-explore"></i>
+                        </div>
+                    </a><!-- .pmbsweb-icon-link -->
+                </div>
+            </section>
+        </div>
+    </main>
+    {% include rcp.html %}
+    {% include backlight.html %}
+    {% include footer.html %}
+    {% include CookiesConsent.html %}
+</body>
+
+</html>
