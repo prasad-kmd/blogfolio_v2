@@ -8,153 +8,29 @@
     <meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by PM -->
     <!-- Page Title -->
     <title>{% if page.title %}{{ page.title }} | {% endif %}{{ site.title }}</title>
-    <meta name="description" content="{% if page.description %}{{ page.description }}{% elsif post.description %}{{ post.description }}{% else %}{{ site.description }}{% endif %}">
-    <!-- Meta Information -->
-    <!-- Google Fonts -->
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&amp;display=swap" rel="stylesheet">
-    <!-- Config -->
-    <link type="text/css" rel="stylesheet"
-        href="https://cdn.jsdelivr.net/gh/prasad-kmd/blogfolio_v2@master/css/config.min.css">
-    <!-- Libraries -->
-    <link type="text/css" rel="stylesheet"
-        href="https://cdn.jsdelivr.net/gh/prasad-kmd/blogfolio_v2@master/css/libs.min.css">
-    <!-- Template Styles -->
-    <link type="text/css" rel="stylesheet"
-        href="https://cdn.jsdelivr.net/gh/prasad-kmd/blogfolio_v2@master/css/style.min.css">
-    <!-- Responsive -->
-    <link type="text/css" rel="stylesheet"
-        href="https://cdn.jsdelivr.net/gh/prasad-kmd/blogfolio_v2@master/css/responsive.min.css">
-
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/prasad-kmd/blogfolio_v2@master/css/custom-config.min.css"
-        type="text/css" />
-
-    <!-- fontAwesome -->
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/aquawolf04/font-awesome-pro@5cd1511/css/all.min.css" />
-
-    <!-- Favicon -->
-    <link rel="icon" href="../img/favicon.png" sizes="32x32">
-
-    <!-- JS Scripts -->
-    <script src="https://cdn.jsdelivr.net/gh/prasad-kmd/blogfolio_v2@master/js/lib/jquery.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/gh/prasad-kmd/blogfolio_v2@master/js/lib/libs.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/gh/prasad-kmd/blogfolio_v2@master/js/contact_form.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/gh/prasad-kmd/blogfolio_v2@master/js/st-core.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/gh/prasad-kmd/blogfolio_v2@master/js/classes.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/gh/prasad-kmd/blogfolio_v2@master/js/main.min.js"></script>
-    <!-- <script src="../js/play.js"></script> -->
-    <script src="https://cdn.jsdelivr.net/gh/prasad-kmd/blogfolio_v2@master/js/custom-config.min.js"></script>
-
-    <title>{{ page.title }} - {{ site.title }}</title>
+    <meta name="description"
+        content="{% if page.description %}{{ page.description }}{% elsif post.description %}{{ post.description }}{% else %}{{ site.description }}{% endif %}">
     <link rel="stylesheet" href="{{ " /assets/css/main.css" | relative_url }}">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/prasad-kmd/blogfolio_v2@master/assets/font/English/stylesheet.min.css" />
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/prasad-kmd/blogfolio_v2@master/assets/font/Sinhala/stylesheet.min.css" />
+    {% include head.html %}
+    {% include font.html %}
 </head>
 
 <body>
     {% include header.html %}
-    {{ content }}
+    <hr />
+    <main class="pmbsweb-main">
+        <div class="stg-container">
+            <section data-appear="fade-zoom" data-unload="fade-down">
+                {{ content }}
+            </section>
+        </div>
+    </main>
     <!-- <audio id="backgroundMusic" loop></audio> -->
     {% include rcp.html %}
     {% include backlight.html %}
     {% include CookiesConsent.html %}
     <!-- Footer -->
-<footer id="pmbsweb-footer" data-appear="fade-up" data-unload="fade-down">
-    <!-- Footer Widgets Area -->
-    <div class="pmbsweb-footer-widgets">
-        <div class="stg-container">
-            <div class="stg-row" data-stagger-appear="fade-left" data-stagger-delay="100">
-                <div class="stg-col-5 stg-tp-col-12 stg-tp-bottom-gap-l">
-                    <div class="pmbsweb-info-widget">
-                        <a href="index.html" class="pmbsweb-logo footer-logo">
-                            <img src="https://cdn.jsdelivr.net/gh/prasad-kmd/blogfolio_v2@master/img/logo.webp" alt="pmbsweb." width="88" height="24">
-                        </a>
-                        <div class="pmbsweb-info-description">
-                            We are a passionate team of developers and
-                            designers who believe in the power of creativity. We help creative people create a
-                            strong online presence that shows their work and tells a story.
-                        </div>
-                        <span class="pmbsweb-label">Follow us:</span>
-                        <ul class="pmbsweb-socials-list" data-stagger-appear="fade-up" data-stagger-delay="75">
-                            <li>
-                                <a href="#" target="_blank" class="pmbsweb-socials-facebook">
-                                    <i></i>
-                                </a>
-                            </li>
-                            <li>
-                                <a href="#" target="_blank" class="pmbsweb-socials-instagram">
-                                    <i></i>
-                                </a>
-                            </li>
-                            <li>
-                                <a href="#" target="_blank" class="pmbsweb-socials-x">
-                                    <i></i>
-                                </a>
-                            </li>
-                            <li>
-                                <a href="#" target="_blank" class="pmbsweb-socials-tiktok">
-                                    <i></i>
-                                </a>
-                            </li>
-                            <li>
-                                <a href="#" target="_blank" class="pmbsweb-socials-patreon">
-                                    <i></i>
-                                </a>
-                            </li>
-                        </ul>
-                    </div>
-                </div>
-                <div class="stg-col-2 stg-offset-1 stg-tp-col-4 stg-m-col-4">
-                    <div class="pmbsweb-widget">
-                        <h6>Services</h6>
-                        <div class="pmbsweb-menu-widget">
-                            <ul>
-                                <li><a href="service-details.html">Branding</a></li>
-                                <li><a href="service-details.html">Marketing</a></li>
-                                <li><a href="service-details.html">Graphic Design</a></li>
-                                <li><a href="service-details.html">Web Design</a></li>
-                                <li><a href="service-details.html">Content Creation</a></li>
-                            </ul>
-                        </div>
-                    </div><!-- .pmbsweb-widget -->
-                </div>
-                <div class="stg-col-2 stg-tp-col-4 stg-m-col-4">
-                    <div class="pmbsweb-widget">
-                        <h6>About Us</h6>
-                        <div class="pmbsweb-menu-widget">
-                            <ul>
-                                <li><a href="about-us.html">About Us</a></li>
-                                <li><a href="about-me.html">About Me</a></li>
-                                <li><a href="team-member.html">Our Team</a></li>
-                                <li><a href="testimonials.html">Testimonials</a></li>
-                                <li><a href="contacts.html">Get in Touch</a></li>
-                            </ul>
-                        </div>
-                    </div><!-- .pmbsweb-widget -->
-                </div>
-                <div class="stg-col-2 stg-tp-col-4 stg-m-col-4">
-                    <div class="pmbsweb-widget">
-                        <h6>Resources</h6>
-                        <div class="pmbsweb-menu-widget">
-                            <ul>
-                                <li><a href="pricing.html">Pricing</a></li>
-                                <li><a href="faq.html">Help Center</a></li>
-                                <li><a href="services.html">Our Services</a></li>
-                                <li><a href="#">Terms of Use</a></li>
-                                <li><a href="#">Privacy Policy</a></li>
-                            </ul>
-                        </div>
-                    </div><!-- .pmbsweb-widget -->
-                </div>
-            </div><!-- .stg-row -->
-        </div><!-- .stg-container -->
-    </div><!-- .pmbsweb-footer-widgets -->
-    <!-- Footer Copyright Line -->
-    <div class="pmbsweb-footer-line stg-container">
-        <div class="align-center">
-            Copyright &copy; PRASAD.KMD™ 2024. All Rights Reserved.
-        </div>
-    </div><!-- pmbsweb-footer-line -->
-</footer>
+    {% include footer.html %}
 </body>
 
 </html>

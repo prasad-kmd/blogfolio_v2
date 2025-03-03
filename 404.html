@@ -3,24 +3,34 @@ permalink: /404.html
 layout: 404
 ---
 
-<style type="text/css" media="screen">
-  .container {
-    margin: 10px auto;
-    max-width: 600px;
-    text-align: center;
-  }
-
-  h1 {
-    margin: 30px 0;
-    font-size: 4em;
-    line-height: 1;
-    letter-spacing: -1px;
-  }
-</style>
+{% include lottie.html %}
+<div class="pmbsweb-hero-block pmbsweb-hero-type01">
+    <div class="pmbsweb-partners">
+        <span class="pmbsweb-label" data-appear="fade-up" data-unload="fade-up">
+            Page not found :(
+        </span>
+        <div class="pmbsweb-grid-5cols pmbsweb-tp-grid-3cols pmbsweb-m-grid-2cols stg-top-gap-s"
+            data-stagger-appear="fade-up" data-stagger-unload="fade-up" data-stagger-delay="100" data-delay="100">
+            <div class="pmbsweb-block">
+                <dotlottie-wc src="../assets/json/lottie/8bitgame.lottie" autoplay loop></dotlottie-wc>
+            </div>
+            <div class="pmbsweb-block">
+                <dotlottie-wc src="../assets/json/lottie/fileempty.lottie" autoplay loop></dotlottie-wc>
+            </div>
+            <div class="pmbsweb-counter pmbsweb-block" data-delay="3000">
+              <div class="pmbsweb-counter-number" data-suffix="">404</div>
+              <div class="pmbsweb-counter-label">The requested page could not be found.</div>
+          </div>
+            <div class="pmbsweb-block">
+                <dotlottie-wc src="../assets/json/lottie/lamp.lottie" autoplay loop></dotlottie-wc>
+            </div>
+            <div class="pmbsweb-block">
+                <dotlottie-wc src="../assets/json/lottie/sparks.lottie" autoplay loop></dotlottie-wc>
+            </div>
+        </div>
+    </div>
+</div>
 <hr/>
-  <div class="container">
-    <h1>404</h1>
-
-    <p><strong>Page not found :(</strong></p>
-    <p>The requested page could not be found.</p>
-  </div>
+<div class="align-center" data-appear="fade-up" data-unload="fade-up" data-delay="100">
+  <a href="/" class="pmbsweb-button">Take me Home</a>
+</div>
