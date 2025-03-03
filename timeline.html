@@ -1,0 +1,54 @@
+---
+layout: timeline
+title: My Timeline
+permalink: /timeline/
+tlpage: class="current-menu-parent"
+---
+<!-- Section: Page Title -->
+<section class="backlight-bottom">
+    <div class="stg-row">
+        <div class="stg-col-6 stg-offset-3 align-center stg-tp-col-10 stg-tp-offset-1">
+            <h1 class="pmbsweb-page-title" data-appear="fade-up" data-unload="fade-up">Timeline of My Moments</h1>
+            <p class="pmbsweb-large-text" data-appear="fade-up" data-delay="100" data-unload="fade-up">Explore the significant moments and milestones that have shaped my journey. Each event is a testament to growth, learning, and achievement.</p>
+        </div>
+    </div>
+</section>
+<section>
+    <!-- Block: Page Title -->
+    {% assign sorted_moments = site.data.moments | sort: 'date' | reverse %}
+    {% for moment in sorted_moments %}
+    <div class="pmbsweb-bento-grid stg-bottom-gap-l">
+        <div class="is-large" data-appear="fade-right" data-unload="fade-left">
+            <a href="{{ moment.images[0] }}" class="pmbsweb-lightbox-link" data-size="960x960">
+            <img class="pmbsweb-lazy" src="img/null.png" data-src="{{ moment.images[0] }}"
+                alt="Image 1 for {{ moment.title }}" width="1200" height="1200"/></a>
+        </div>
+        <div class="is-medium pmbsweb-block stg-vertical-space-between" data-appear="fade-down" data-delat="100"
+            data-unload="fade-right">
+            <h1>{{ moment.title }}</h1>
+            <p class="pmbsweb-large-text">{{ moment.description }}</p>
+        </div>
+        <div class="is-small pmbsweb-block" data-appear="fade-up" data-delat="100" data-unload="fade-left">
+            <ul class="pmbsweb-meta-list">
+                <li>
+                    <span class="pmbsweb-meta">{{ moment.q2 }}:</span>
+                    <span class="pmbsweb-highlight">{{ moment.a2 }}</span>
+                </li>
+                <li>
+                    <span class="pmbsweb-meta">{{ moment.q1 }}:</span>
+                    <span class="pmbsweb-highlight">{{ moment.a1 }}</span>
+                </li>
+                <li>
+                    <span class="pmbsweb-meta">Date:</span>
+                    <span class="pmbsweb-highlight">{{ moment.date }}</span>
+                </li>
+            </ul>
+        </div>
+        <div class="is-small" data-appear="fade-left" data-delat="200" data-unload="fade-right">
+            <a href="{{ moment.images[1] }}" class="pmbsweb-lightbox-link" data-size="960x960">
+            <img class="pmbsweb-lazy" src="img/null.png" data-src="{{ moment.images[1] }}"
+                alt="Image 2 for {{ moment.title }}" width="960" height="960"></a>
+        </div>
+    </div>
+    {% endfor %}
+</section>
