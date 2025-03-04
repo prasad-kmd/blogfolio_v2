@@ -1,12 +1,78 @@
 # config.yml
-
+local_backend: true
 backend:
   name: git-gateway
-  branch: main # Branch to update (optional; defaults to master)
-media_folder: 'assets/uploads'
+  branch: master # Or your main branch (e.g., main)
+  commit_messages:
+    create: 'Create {{collection}} “{{slug}}”'
+    update: 'Update {{collection}} “{{slug}}”'
+    delete: 'Delete {{collection}} “{{slug}}”'
+    uploadMedia: 'Upload “{{path}}”'
+    deleteMedia: 'Delete “{{path}}”'
+
+media_folder: "img" # Where to store media files (relative to the repo root)
+public_folder: "/img" # The URL that is used for accessing the media files
+
 collections:
-  - name: 'blog'
-    label: 'Blog'
-    folder: '_posts/'
+  - name: "posts"
+    label: "Posts"
+    folder: "_posts" # Path to the folder where posts are stored
+    create: true # Allow users to create new posts
+    slug: "{{year}}-{{month}}-{{day}}-{{slug}}" # Define the slug format (URL)
     fields:
-      - { name: Title }
+      - {label: "Published", name: "published", widget: "boolean", default: true, help: "Set to 'true' to publish this post. If unchecked, the post will be a draft."}
+      - {label: "Date", name: "date", widget: "datetime", format: "YYYY-MM-DD HH:mm", required: true, help: "The date of the post. Used for sorting.  Format: yyyy-MM-dd HH:mm"}
+      - {label: "Layout", name: "layout", widget: "string", default: "post", required: true, help: "The layout template. Use Post Layout for better results."}
+      - {label: "Title", name: "title", widget: "string", required: true, help: "The title of the post."}
+      - {label: "Description", name: "description", widget: "string", help: "The Description of the post."}
+      - {label: "Author", name: "author", widget: "string", default: "Prasad", required: true, help: "The author of the post. Should match _data/authors.yml"}
+      - {label: "Categories", name: "categories", widget: "string", required: false, help: "Categories for the post. Separate with spaces."}
+      - {label: "Tags", name: "tags", widget: "string", required: false, help: "Tags for the post. Separate with spaces."}
+      - {label: "Enable LaTeX Supports", name: "latex", widget: "boolean", default: false, help: "Enable LaTeX support."}
+      - {label: "Enable highlightJS Supports", name: "highlightjs", widget: "boolean", default: false, help: "Enable highlight.js support."}
+      - {label: "Thumbnail", name: "thumbnail", widget: "image", default: "/img/logo.webp", help: "The thumbnail image. Use relative URL to the root. 1:1 image is best."}
+      - {label: "Permalink", name: "permalink", widget: "string", default: "/posts/:title-:year:month:day_:hour:minute:second:output_ext", required: true, help: "The permalink for the post.  Format: /posts/:title-:year:month:day_:hour:minute:second:output_ext"}
+      - {label: "Body", name: "body", widget: "markdown", help: "The main content of the post. Use Markdown for formatting."} # Or, use 'code' widget for HTML content.
+  - name: "portfolio"
+    label: "Portfolio"
+    folder: "_portfolio" # Path to the folder where portfolio items are stored
+    create: true # Allow users to create new portfolio items
+    slug: "{{year}}-{{month}}-{{day}}-{{slug}}" # Define the slug format (URL)
+    fields:
+      - {label: "Published", name: "published", widget: "boolean", default: true, help: "Set to 'true' to publish this portfolio item."}
+      - {label: "Date", name: "date", widget: "datetime", format: "YYYY-MM-DD HH:mm", required: true, help: "The date of the portfolio."}
+      - {label: "Layout", name: "layout", widget: "string", default: "post", required: true, help: "The layout template."}
+      - {label: "Order", name: "order", widget: "number", required: true, help: "Portfolio Number for sorting."}
+      - {label: "Title", name: "title", widget: "string", required: true, help: "The title of the portfolio item."}
+      - {label: "Description", name: "description", widget: "string", help: "The Description of the portfolio item."}
+      - {label: "Categories", name: "categories", widget: "string", required: false, help: "Categories for the portfolio item."}
+      - {label: "Tags", name: "tags", widget: "string", required: false, help: "Tags for the portfolio item."}
+      - {label: "Enable LaTeX Supports", name: "latex", widget: "boolean", default: false, help: "Enable LaTeX support."}
+      - {label: "Enable highlightJS Supports", name: "highlightjs", widget: "boolean", default: false, help: "Enable highlight.js support."}
+      - {label: "Thumbnail", name: "thumbnail", widget: "image", default: "/img/logo.webp", help: "The thumbnail image. Use relative URL to the root."}
+      - {label: "Permalink", name: "permalink", widget: "string", default: "/portfolio/:title:output_ext", required: true, help: "The permalink for the portfolio item."}
+      - {label: "Body", name: "body", widget: "markdown", help: "The main content of the post. Use Markdown for formatting."} # or code widget
+  - name: "config"
+    label: "Jekyll Config"
+    files:
+      - file: "_config.yml"
+        label: "Website Configuration"
+        name: "website_configuration"
+        fields:
+          - {label: "Website title", name: "title", widget: "string", default: "PrasadM's Blogfolio", help: "The main title."}
+          - {label: "Website Name", name: "name", widget: "string", default: "Prasad Madhuranga", help: "Custom Name of the Site."}
+          - {label: "Website description", name: "description", widget: "string", help: "A short description."}
+          - {label: "Website URL", name: "url", widget: "string", help: "The full URL of your website.", pattern: ["^(https?://)?(www.)?[a-zA-Z0-9.-]+.[a-zA-Z]{2,}(/[^s]*)?$", "Must be a valid URL"]}
+          - {label: "Location Name", name: "local", widget: "string", help: "Location Name that used in About Me."}
+          - {label: "Job Name", name: "jobs", widget: "string", help: "Job Name that used in About Me."}
+          - {label: "Your Slogan", name: "slogan", widget: "string"}
+          - {label: "Preview image", name: "cover", widget: "image", help: "Image used in the social preview."}
+          - {label: "Telegram Bot Token", name: "telegram_token", widget: "string", help: "Telegram Bot Token."}
+          - {label: "Telegram Chat ID", name: "telegram_chat_id", widget: "string", help: "Telegram Chat ID."}
+          - {label: "LinkedIn Profile", name: "linkedin", widget: "string", help: "LinkedIn Profile URL"}
+          - {label: "GitHub Profile", name: "github", widget: "string", help: "GitHub Profile URL"}
+          - {label: "Medium Profile", name: "medium", widget: "string", help: "Medium Profile URL"}
+          - {label: "Telegram Profile", name: "telegram", widget: "string", help: "Telegram Channel URL"}
+          - {label: "Google Maps Profile", name: "google-maps", widget: "string", help: "Google Maps Profile URL"}
+          - {label: "Research Gate Profile", name: "researchgate", widget: "string", help: "Research Gate Profile URL"}
+          - {label: "Years of Experience", name: "experience", widget: "number", help: "Years of Experience"}
