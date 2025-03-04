@@ -25,7 +25,7 @@ tlpage: class="current-menu-parent"
         </div>
         <div class="is-medium pmbsweb-block stg-vertical-space-between" data-appear="fade-down" data-delat="100"
             data-unload="fade-right">
-            <h1>{{ moment.title }}</h1>
+            <h1 style="font-family: {{ moment.titlefont }};">{{ moment.title }}</h1>
             <p class="pmbsweb-large-text">{{ moment.description }}</p>
         </div>
         <div class="is-small pmbsweb-block" data-appear="fade-up" data-delat="100" data-unload="fade-left">
@@ -50,5 +50,6 @@ tlpage: class="current-menu-parent"
                 alt="Image 2 for {{ moment.title }}" width="960" height="960"></a>
         </div>
     </div>
+    <hr/>
     {% endfor %}
 </section>

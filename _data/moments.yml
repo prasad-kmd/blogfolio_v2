@@ -1,22 +1,24 @@
-- title: "Achieved a Milestone"
-  date: 1023-03-01
-  description: "Briefly describe the achievement."
+- title: "වත්සිරි වරුණ"
+  titlefont: Abhaya Libre
+  date: 2024-04-07
+  description: "Awurudhu Uthsawaya - New Year Festival held by New Engineering Batch of OUSL KRC."
   q1: "Location"
-  a1: "london"
+  a1: "OUSL KRC Playground Premises"
   q2: "Categories"
-  a2: "Web"
+  a2: "Events"
   images:
-    - "/assets/img/bg.webp"
-    - "/assets/img/me.webp"
+    - "https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhVXQcl4Rl5-__fTPH4tjJgMwUgXEY6eAtVpeG1vwR3NS0M3b2yevdAyzPvaG_BSGgX2qtwGuL9Z04HNKPFxByN_bVIj9dZhyphenhyphenwroxJ_1nYxYOvlNiOVPjQVjQoZHAluxVTOak2lfJNRSnikbJJz4uRD2qC3ojmw-P71CD0FmkdW9EbzzgY/s1600/Ousl_event2024April%20(1).webp"
+    - "https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEif2HSfGc2CpKOG5HE23NK7SBl6WiXY7nA4FoRhqK737SUp_gT7UdsAErnIcatqoVmB77lrNzSy0z_b3X0h4MidENIeft6xqT-Z3SRKdD5i4NkRcPPDes4Pynl9QRL4m_B9_EexjBAZjNDphjUa1SDD667ODjt1x9nXF0_JZPKaCN19VJE/s1600/Ousl_event2024April%20(2).webp"
 
-- title: "Attended a Conference"
-  date: 2022-12-15
-  description: "Short description of the conference experience."
+- title: "වත්සිරි වරුණ"
+  titlefont: Abhaya Libre
+  date: 2024-04-07
+  description: "Awurudhu Uthsawaya - New Year Festival held by New Engineering Batch of OUSL KRC."
+  q1: "Location"
+  a1: "OUSL KRC Playground Premises"
+  q2: "Categories"
+  a2: "Events"
   images:
-    - "/assets/img/me.webp"
+    - "https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEiRV2nApdAzpOEPW3A3_wQNdibaN5ncbbbVExJmwCpnUhF6tSSlQiyW71gLxc9A60bZGMEDTLYJ-ltdHXLKy8ru6gwQ7aW6adHybhKwoaDt9w8Jc2J3LoBzYPvU7fgF98r26ev1h5GQg-z1fKmx8ktdZFj9V0NH4_-LhkdskAlnl3WJy6x1iVqlAirNrEUf/s1600/Ousl_event2024April%20%283%29.webp"
+    - "https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjMJXOk5f0-blVVRhxtvgjIfBTj_V-eGqJztX2sagg5N5JFmG9am6-EjWIp49M5zyyo25Nh4VPmykcRM7fBFnaXgCjGjOcQOzPWYh5soqm6PP9geD6Mr5FAAbCzb3n0l6DMM112oNrpBICkqa29NsKRtxKdIyKBVT_wVYKNOHrdrL6sIsFdWhNQBuvFBTaT/s1600/Ousl_event2024April%20%284%29.webp"
 
-- title: "Started a New Project"
-  date: 2022-09-01
-  description: "Brief overview of the new project's goals."
-  images:
-    - "/assets/img/screenshot/Screenshot.en.home.webp"
