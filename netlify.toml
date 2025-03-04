@@ -1,10 +1,11 @@
 [build]
-  publish = "_site"  # Or your publish directory
+  publish = "_site"
   command = """
-    gem update --system
+    ruby -v
+    sudo -E gem update --system --no-document
     bundle install
     bundle exec jekyll build
   """
 
 [build.environment]
-  RUBY_VERSION = "2.7.8" # Or newer version of 2.7 or 3.x
+  RUBY_VERSION = "3.4.2"
