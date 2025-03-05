@@ -17,9 +17,9 @@ tlpage: class="current-menu-parent"
     <!-- Block: Page Title -->
     {% assign sorted_moments = site.data.moments | sort: 'date' | reverse %}
     {% for moment in sorted_moments %}
-    <div class="pmbsweb-bento-grid stg-bottom-gap-l">
+    <div class="pmbsweb-bento-grid stg-bottom-gap-l" id="{{ moment.title }}-{{ moment.date }}">
         <div class="is-large" data-appear="fade-right" data-unload="fade-left">
-            <a href="{{ moment.images[0] }}" class="pmbsweb-lightbox-link" data-size="960x960">
+            <a href="{{ moment.images[1] }}" class="pmbsweb-lightbox-link" data-size="1920x1080">
             <img class="pmbsweb-lazy" src="img/null.png" data-src="{{ moment.images[0] }}"
                 alt="Image 1 for {{ moment.title }}" width="1200" height="1200"/></a>
         </div>
@@ -45,8 +45,8 @@ tlpage: class="current-menu-parent"
             </ul>
         </div>
         <div class="is-small" data-appear="fade-left" data-delat="200" data-unload="fade-right">
-            <a href="{{ moment.images[1] }}" class="pmbsweb-lightbox-link" data-size="960x960">
-            <img class="pmbsweb-lazy" src="img/null.png" data-src="{{ moment.images[1] }}"
+            <a href="{{ moment.images[3] }}" class="pmbsweb-lightbox-link" data-size="1920x1080">
+            <img class="pmbsweb-lazy" src="img/null.png" data-src="{{ moment.images[2] }}"
                 alt="Image 2 for {{ moment.title }}" width="960" height="960"></a>
         </div>
     </div>
