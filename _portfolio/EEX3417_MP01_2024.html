@@ -1,0 +1,149 @@
+---
+published: true
+date: 2024-11-01 18:29
+layout: portfolio
+order: 1
+title: Mini Project - EEX3417
+description: This project has created for EEX3417 subject in OUSL BSc(Hons) Engineering Programme which is compulsory.
+categories: WebDesign DBMS
+latex: false
+highlightjs: false
+thumbnail: https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgIHhPXe9tSUgdwziw15UWwdW0sxwe1bAhlod_-drxV6ODL6X7xkk9-yXtV77r_uLahuxsvRmVFYDIe_yFLVf9DOh0FnBbXzDrYttvOxaluS3HXe3Ej630xSC97IxHQPiEU4P4ZC9TRLYitKzL1CUv4cWDKuRC_GtUyeXHmZhx1LG2BDhFgdrhcfyryAG6n/s1600/login_localhost_ems_auth.html.WEBP
+permalink: /portfolio/:title:output_ext
+---
+<h1>
+    Event Management System
+</h1>
+<h4>
+    INTRODUCTION 
+</h4>
+<p>
+    Effective management is crucial in the fast-moving corporate world of today, particularly in the event sector. By creating an extensive, web-based event management system, this project aims to meet the urgent demand for more efficient operations in event management firms, particularly for Rathna Events. With the help of this custom system, Rathna Events may achieve notable gains in productivity and data management by replacing conventional, frequently manual procedures with an automated, centralised platform. Constructed with a strong technological stack that includes HTML, PHP, and MySQL, the system offers a dependable and scalable solution that can manage the wide range of event management responsibilities handled by Rathna Events.</p> <p>
+For both customers and administrators, the Rathna Events Management System provides unique and customised user interfaces. Customers get access to an easy-to-use site where they can maintain their profiles, check their booking history, securely book events using a payment gateway, explore the Rathna Events offers, and read comprehensive event information. Customers are empowered by this self-service feature, which also lessens the administrative load on the Rathna Events staff.</p> <p>
+On the administrative side, the system offers a robust set of tools meant to simplify many features of Rathna Events-specific event administration. The system distinguishes between managers, event organisers, and system administrators by implementing role-based access restriction in recognition of the many responsibilities that exist inside the organisation.  Each role has access to specific functionalities tailored to their responsibilities within Rathna Events. Managing employees, clients, events, venues, bookings, and payments are all under the general authority of managers.  Event Organizers focus on event-specific tasks, such as creating and modifying events, managing bookings. System Administrators are responsible for system-level operations, including database backups and other maintenance tasks. Data security is guaranteed by this fine-grained access control, which also makes it easier for the Rathna Events team to assign tasks effectively.</p> <p>
+Rathna Events' present and future requirements are particularly addressed by the system's architecture, which is built for scalability and maintainability. HTML offers a user-friendly front-end interface, while PHP and MySQL offer a reliable backend for data store and retrieval. The technologies used, the development process, and possible future improvements adapted to Rathna Events' company goals will all be covered in more detail in this report. This Event Management System enables Rathna Events to improve client happiness, streamline operations, and boost overall business performance in the highly competitive event management marketplace by automating key processes and offering real-time access to essential information.
+</p><br/>
+<h4>
+    HIGH-LEVEL DESIGN
+</h4>
+<h5>
+    DATABASE RELATIONS
+</h5>
+<img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEj0b9qCGH5dFKDedonDJM9cRvV-C9a0iTukhGpyyJXxZ4yccP8csdzO3Cl0qcDmES8wEB3SIHTrf5IVLmeqr2TP24Kphci3RZDSCVIAFnr3HRAYgwoMJAUyLlXYt11KNJpxyP_tHIpMKC-yZYEzj6eXY6S4MoGNDBg0CfGlfSwn5ozMjCKX2VtxYfwRfLNJ/s1600/db_ems-db%20%282%29.webp" alt="DB Screenshot"/><br/>
+<h5>
+    ENTITY RELATIONSHIP DIAGRAM
+</h5>
+<img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEh3sCmK9l7l9h0jTeFGHQHONDmRLaGV9ibTY3SZ4rpMsQ3_aT42QoUK1TRGYra07LUxTAFvDZJIRRzjrd5poqrEdi-aV96J3CJ5g7zj3SzOjkp8x5hCUzdqxLvF_YfYT1jvSWrrNTyVL_QNXEI8RM3VDYuoXVUWqYfBkJkhosatUq4AZ9HnLAjJHHa5FToc/s1600/Entityrelationshipdiagram1.webp" alt="ERD Picture"/><br/>
+<h4>
+    DATA MODELLING 
+</h4>
+<h5>
+    BUSINESS RULES
+</h5>
+<ul>
+        <li>A client can have multiple bookings.</li>
+        <li>A booking is associated with one client and one event.</li>
+        <li>An event takes place at one venue.</li>
+        <li>A venue can host multiple events.</li>
+        <li>A booking can have one payment.</li>
+        <li>A client cannot book more seats than the remaining capacity of an event.</li>
+        <li>A staff member cannot delete their own account.</li>
+</ul><br/>
+<h4>
+    TEST RESULTS
+</h4>
+<h5>
+    HOME PAGE 
+</h5>
+<img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjhcNSXh0PWrwmef0nlr4HtNg8HPL4sWaYiwWdqKNg_blsn3XWBO-L500ul3x0crmyUbrInG5xSxDkWFsge-fT3qVUFOf7iMvuymFnrT2yRpm8V10Yc8Z4_fiqXzV6ZwPUPODvzothIY4t7nNBW1SEvZN_qZFFF_fXMZwDFtbw0dVarFdABO7bHzxY4cLtQ/s1600/localhost_ems_.WEBP" alt=""/><br/>
+<h5>
+    LOGIN / SIGNUP PAGE
+</h5>
+<img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhFCI6CwQ5IwwT0bkL6P42AyLgvzeQu3qczhVLlBZR4FjDnwrmnQQV8iuuEVzgsjCa79jIVy3FYMkv0pqbUdxQs7x05jwK7C7QdL0nElCfy7e6ylCLhSNXZx3Qd3UvqZZdXWGfEMpWIxRCev49Ta3dkzUJ0up_YlPJdMZJMpssyeHK2FsLOg69Tkp1vZxui/s1600/login_localhost_ems_auth.html.WEBP" alt=""/><br/>
+<img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEiDinSf_BmYyOOmwNSMwEdsA3MW8VwEhbIrcEJmJybBtc62TqRj2SBsnd8tzqZAEBAZuIR0Ap12Sdi-LFJxEY3iVej_hiCW8zJOySOHO4BUV4PEcYPmzh0C7junkSNvQS1ROCqaaRO_oYFY3PE05vEHB7XVQoFKRgPqUjz3wcatGxfmfXp8A8EgryJQakS1/s1600/signup_localhost_ems_auth.html.WEBP" alt=""><br/>
+<h5>
+    ADMINISTRATOR LOGIN
+</h5>
+<img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgjM5x__8TGgjtdfeCBs27orcguA306Kbd19aPYTpXNQzkk-pFAA_D7BYOxyXbZtfnnkO8yrMbRiwy8zCt2zoIXkvCMVwKxIStZrRpvfMnWtQMfuBSHcJ32OqO_J4jtj0fDDM2RvSJJGkUhYpEMXIX53gVROGWOOY5OUoMKp_sWo_kwGbGKhGssAWTgzmnM/s1600/localhost_ems_admin_login.php.webp" alt=""><br/>
+<h5>
+    ADMINISTRATOR DASHBOARD [BACKGROUNG LOADING STAGE]
+</h5>
+<img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEh7MiB1Go6HJEgJCMsYZCROc2I8cEK5MEtrHtGJsdIirHEN4jlzGJHSvrT9hNp-jCHk2ht3IjrWdWiI1hCoT7xHMBCiC5OW1Tg869_RDXfscon4PLlkeQuxWesQtN3Z1yKavyGDKHGY1PCOoXpAJD5EN70HZegJiIUNedTs3Q0REl7l7V0FbthjM-Z-rVYu/s1600/loading_localhost_ems_admin_dashboard.php.WEBP" alt=""><br/>
+<h5>
+    ADMINISTRATOR DASHBOARD [MANAGER]
+</h5>
+<img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEg7DFhc6eOU4c29jdxYWzYdBJTYuYSynDPsf3h5PyZ6C_u03barW4SBro9-hji5OScPoIyy36DboNdQR7KgP2luPkk0D2QtwlLFZvsX8YQDx2lzPmvIrfIcr1S7GG1BEx7iTIP2N0kSjzvlBMutHhXMNT52Ll_IXAlpDyhtrSXlDIR7JVcMFjH2-UFHt2yC/s1600/loaded_localhost_ems_admin_dashboard.php.WEBP" alt=""><br/>
+
+<!-- From Uiverse.io by TreepDeep --> 
+<a href="https://github.com/prasad-kmd/ems" target="_blank" rel="noopener noreferrer"><button class="button x">
+    <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" fill="#ffffff">
+      <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+      <g
+        id="SVGRepo_tracerCarrier"
+        stroke-linecap="round"
+        stroke-linejoin="round"
+      ></g>
+      <g id="SVGRepo_iconCarrier">
+        <title>github</title>
+        <rect width="24" height="24" fill="none"></rect>
+        <path
+          d="M12,2A10,10,0,0,0,8.84,21.5c.5.08.66-.23.66-.5V19.31C6.73,19.91,6.14,18,6.14,18A2.69,2.69,0,0,0,5,16.5c-.91-.62.07-.6.07-.6a2.1,2.1,0,0,1,1.53,1,2.15,2.15,0,0,0,2.91.83,2.16,2.16,0,0,1,.63-1.34C8,16.17,5.62,15.31,5.62,11.5a3.87,3.87,0,0,1,1-2.71,3.58,3.58,0,0,1,.1-2.64s.84-.27,2.75,1a9.63,9.63,0,0,1,5,0c1.91-1.29,2.75-1,2.75-1a3.58,3.58,0,0,1,.1,2.64,3.87,3.87,0,0,1,1,2.71c0,3.82-2.34,4.66-4.57,4.91a2.39,2.39,0,0,1,.69,1.85V21c0,.27.16.59.67.5A10,10,0,0,0,12,2Z"
+        ></path>
+      </g>
+    </svg>
+    prasad-kmd / ems
+  </button></a>
+<style>
+    /* From Uiverse.io by TreepDeep */ 
+.button.x {
+  max-width: 320px;
+  display: flex;
+  padding: 0.5rem 1.4rem;
+  font-size: 0.875rem;
+  line-height: 1.25rem;
+  font-weight: 700;
+  text-align: center;
+  text-transform: uppercase;
+  vertical-align: middle;
+  align-items: center;
+  border-radius: 0.5rem;
+  border: 1px solid rgba(24, 23, 23, 0.25);
+  gap: 0.75rem;
+  color: #ffffff;
+  background-color: rgb(24, 23, 23);
+  cursor: pointer;
+  transition: all 0.6s ease;
+  text-decoration: none;
+}
+
+.button.x svg {
+  height: 24px;
+  width: 24px;
+  fill: #fff;
+  margin-right: 0.5rem;
+}
+
+.button.x:hover {
+  transform: scale(1.02);
+  background-color: #333;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.button.x:focus {
+  outline: none;
+  box-shadow: 0 0 0 3px rgba(0, 0, 0, 0.3);
+}
+
+.button.x:active {
+  transform: scale(0.98);
+  opacity: 0.8;
+}
+
+@media (max-width: 480px) {
+  .button.x {
+    max-width: 100%;
+  }
+}
+
+</style>  <br/>
+<h6 style="font-family: Nasalization Rg;">However, This project has been rejected by Temporary Demonstrator @ KRC.</h6>

@@ -1,0 +1,407 @@
+---
+layout: default
+title: "Scientific Calculator with Graphing"
+permalink: /scientific-calculator/
+---
+{% include KaTeX.html %}
+<main id="pmbsweb-main">
+    <div class="stg-container">
+        <style>
+            .calculator {
+                margin-bottom: 20px;
+                /* Add spacing between calculator and graph */
+            }
+
+            .display {
+                margin-bottom: 10px;
+            }
+
+            #result {
+                width: 100%;
+                padding: 10px;
+                font-size: 20px;
+                text-align: right;
+                border: 1px solid #ccc;
+                border-radius: 5px;
+            }
+
+            #katex-result {
+                width: 100%;
+                padding: 10px;
+                font-size: 20px;
+                text-align: right;
+                border: 1px solid #ccc;
+                border-radius: 5px;
+            }
+
+            .buttons {
+                display: grid;
+                grid-template-columns: repeat(4, 1fr);
+                grid-gap: 5px;
+            }
+
+            button {
+                padding: 10px;
+                font-size: 18px;
+                border: none;
+                border-radius: 5px;
+                background-color: #eee;
+                cursor: pointer;
+                transition: background-color 0.2s;
+            }
+
+            button:hover {
+                background-color: #ddd;
+            }
+
+            .graph-section {
+                text-align: center;
+            }
+
+            .graph-controls {
+                margin-bottom: 10px;
+            }
+
+            #equationInput {
+                width: 100%;
+                padding: 5px;
+                margin-bottom: 5px;
+            }
+
+            #graphCanvas {
+                max-width: 100%;
+                /* Ensure the canvas doesn't exceed its container's width */
+                height: auto;
+                /* Maintain aspect ratio */
+            }
+        </style>
+
+        <!-- Chart.js -->
+        <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.1/dist/chart.umd.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/chartjs-plugin-zoom/dist/chartjs-plugin-zoom.min.js"></script>
+
+        <!-- Math.js -->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjs/11.8.0/math.js"></script>
+        <div class="container">
+            <div class="calculator">
+                <div class="display">
+                    <div id="katex-result"></div>
+                    <input type="hidden" id="result">
+                </div>
+                <div class="buttons" style="color:auto;">
+                    <!-- Basic operations -->
+                    <button onclick="appendValue('7')" aria-label="Seven">$7$</button>
+                    <button onclick="appendValue('8')" aria-label="Eight">$8$</button>
+                    <button onclick="appendValue('9')" aria-label="Nine">$9$</button>
+                    <button onclick="appendValue('+')" aria-label="Add">$+$</button>
+                    <button onclick="appendValue('4')" aria-label="Four">$4$</button>
+                    <button onclick="appendValue('5')" aria-label="Five">$5$</button>
+                    <button onclick="appendValue('6')" aria-label="Six">$6$</button>
+                    <button onclick="appendValue('-')" aria-label="Subtract">$-$</button>
+                    <button onclick="appendValue('1')" aria-label="One">$1$</button>
+                    <button onclick="appendValue('2')" aria-label="Two">$2$</button>
+                    <button onclick="appendValue('3')" aria-label="Three">$3$</button>
+                    <button onclick="appendValue('*')" aria-label="Multiply">$*$</button>
+                    <button onclick="appendValue('0')" aria-label="Zero">$0$</button>
+                    <button onclick="appendValue('.')">.</button>
+                    <button onclick="calculate()" aria-label="Calculate">$=$</button>
+                    <button onclick="appendValue('/')" aria-label="Divide">$/$</button>
+                    <button onclick="clearResult()" aria-label="Clear">$C$</button>
+
+                    <!-- Scientific functions -->
+                    <button onclick="appendValue('sqrt(')" aria-label="Square root">$√$</button>
+                    <button onclick="appendValue('^(')" aria-label="Power">$^$</button>
+                    <button onclick="appendValue('sin(')" aria-label="Sine">$sin$</button>
+                    <button onclick="appendValue('cos(')" aria-label="Cosine">$cos$</button>
+                    <button onclick="appendValue('tan(')" aria-label="Tangent">$tan$</button>
+                    <button onclick="appendValue('log(')" aria-label="Logarithm">$log$</button>
+                    <button onclick="appendValue('pi')" aria-label="Pi">$π$</button>
+                    <button onclick="appendValue('e')" aria-label="Euler's number">$e$</button>
+                    <button onclick="appendValue('(')">$($</button>
+                    <button onclick="appendValue(')')">$)$</button>
+                    <button onclick="appendValue('abs(')" aria-label="Absolute Value">$abs$</button>
+                    <button onclick="appendValue('floor(')" aria-label="Floor">$floor$</button>
+                    <button onclick="appendValue('ceil(')" aria-label="Ceil">$ceil$</button>
+                    <button onclick="appendValue('round(')" aria-label="Round">$round$</button>
+
+                    <!-- Complex Number Support -->
+                    <button onclick="appendValue('complex(')" aria-label="Complex Number">$Complex$</button>
+                    <button onclick="appendValue(',')" aria-label="Complex Number Separator">$,$</button>
+                    <button onclick="appendValue('i')" aria-label="Imaginary unit">$i$</button>
+
+                </div>
+            </div>
+            
+            <div class="graph-section">
+                <h2>Graphing</h2>
+                <div class="graph-controls">
+                    <table>
+                        <tbody>
+                            <tr>
+                                <td>
+                                    <input type="text" id="equationInput" placeholder="Enter equation (e.g., $x^2$ or x^2)"
+                                    aria-label="Equation"/>
+                                </td>
+                                <td>
+                                    <button onclick="plotGraph()">Plot Graph</button>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <label for="chartType">Chart Type:</label>
+                                    <select id="chartType" onchange="plotGraph()" aria-label="Chart Type">
+                                        <option value="line">Line</option>
+                                        <option value="scatter">Scatter</option>
+                                        <option value="bar">Bar</option>
+                                    </select>
+                                </td>
+                                <td>
+                                    <label for="chartColor">Chart Color:</label>
+                                    <input type="color" id="chartColor" value="#0000FF" onchange="plotGraph()"
+                                    aria-label="Chart Color">
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <label for="xMin">X Min:</label>
+                                    <input type="number" id="xMin" value="-5" onchange="plotGraph()" aria-label="X Min">
+                                </td>
+                                <td>
+                                    <label for="xMax">X Max:</label>
+                                    <input type="number" id="xMax" value="5" onchange="plotGraph()" aria-label="X Max">
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <label for="zoomFactorInput">Zoom Factor:</label>
+                                    <input type="number" id="zoomFactorInput" value="1" step="0.1" onchange="updateZoomFactor()"
+                                    aria-label="Zoom Factor">
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <canvas id="graphCanvas" width="600" height="400" aria-label="Graph"></canvas>
+
+            </div>
+        </div>
+        <hr/>
+        <script>
+            let result = document.getElementById('result');
+            let katexResult = document.getElementById('katex-result');
+            let chart;
+            let xMin = -5;
+            let xMax = 5;
+            let zoomFactor = 1;
+            let panOffset = 0;
+            let lastResult = localStorage.getItem('lastResult') || '';
+            let equationInputVal = localStorage.getItem('equationInput') || '';
+
+            // Load initial values
+            result.value = lastResult;
+            updateKatex();
+            document.getElementById('equationInput').value = equationInputVal;
+
+            // Function to save to local storage
+            function saveToLocalStorage() {
+                localStorage.setItem('lastResult', result.value);
+                localStorage.setItem('equationInput', document.getElementById('equationInput').value);
+            }
+
+            function appendValue(value) {
+                result.value += value;
+                updateKatex();
+                saveToLocalStorage();
+            }
+
+            function clearResult() {
+                result.value = '';
+                updateKatex();
+                saveToLocalStorage();
+            }
+
+            function updateKatex() {
+                try {
+                    katex.render(result.value, katexResult, {
+                        throwOnError: false,
+                        output: "mathml"
+                    });
+                } catch (error) {
+                    katexResult.textContent = 'Error';
+                }
+            }
+
+            function calculate() {
+                try {
+                    const evaluatedResult = math.evaluate(result.value);
+                    result.value = evaluatedResult.toString();
+                    updateKatex();
+                    saveToLocalStorage();
+                } catch (error) {
+                    result.value = 'Error';
+                    katexResult.textContent = 'Error: ' + error.message;
+                }
+            }
+
+            function plotGraph() {
+                const canvas = document.getElementById('graphCanvas');
+                const equation = document.getElementById('equationInput').value;
+                const chartType = document.getElementById('chartType').value;
+                const chartColor = document.getElementById('chartColor').value;
+
+                xMin = parseFloat(document.getElementById('xMin').value);
+                xMax = parseFloat(document.getElementById('xMax').value);
+                zoomFactor = parseFloat(document.getElementById('zoomFactorInput').value);
+
+                try {
+                    const compiledFunction = math.compile(equation);
+
+                    const xValues = [];
+                    const yValues = [];
+                    const step = (xMax - xMin) / 200; // More steps for a smoother curve
+                    for (let i = xMin; i <= xMax; i += step) {
+                        xValues.push(i);
+                        try {
+                            yValues.push(compiledFunction.evaluate({ x: (i - panOffset) / zoomFactor }));
+                        } catch (evalError) {
+                            console.error("Evaluation error:", evalError);
+                            alert("Equation could not be evaluated for all x values in range");
+                            return;
+                        }
+                    }
+
+                    if (chart) {
+                        chart.destroy();
+                    }
+
+                    const data = {
+                        labels: xValues,
+                        datasets: [{
+                            label: equation,
+                            data: yValues,
+                            borderColor: chartColor,
+                            fill: false
+                        }]
+                    };
+
+                    const config = {
+                        type: chartType,
+                        data: data,
+                        options: {
+                            responsive: true,
+                            maintainAspectRatio: true,
+                            scales: {
+                                x: {
+                                    type: 'linear',
+                                    position: 'bottom',
+                                    min: xMin,
+                                    max: xMax
+                                },
+                                y: {
+                                    type: 'linear',
+                                    position: 'left'
+                                }
+                            },
+                            plugins: {
+                                title: {
+                                    display: true,
+                                    text: equation
+                                },
+                                zoom: {
+                                    zoom: {
+                                        enabled: false // Disable zoom functionality
+                                    },
+                                    pan: {
+                                        enabled: false
+                                    }
+                                }
+                            },
+                        },
+                    };
+
+                    chart = new Chart(canvas, config);
+
+                    saveToLocalStorage();
+
+                } catch (compileError) {
+                    console.error("Invalid Equation", compileError);
+                    alert("Invalid Equation: " + compileError.message); // Better error message
+                }
+            }
+
+            function updateZoomFactor() {
+                zoomFactor = parseFloat(document.getElementById('zoomFactorInput').value);
+                plotGraph();
+            }
+        </script>
+        <style>
+            /* General styling for the graph section */
+
+            /* Styling for the graph controls container */
+            .graph-controls {
+                display: flex;
+                flex-wrap: wrap;
+                gap: 10px;
+                margin-bottom: 20px;
+            }
+
+            /* Styling for input fields and buttons */
+            .graph-controls input[type="text"],
+            .graph-controls input[type="number"],
+            .graph-controls input[type="color"],
+            .graph-controls select,
+            .graph-controls button {
+                padding: 8px;
+                border: 1px solid #ccc;
+                border-radius: 4px;
+                font-size: 16px;
+                flex: 1 1 200px;
+                /* Ensures inputs take up at least 200px width */
+            }
+
+            /* Styling for the button */
+            .graph-controls button {
+                background-color: #007bff;
+                color: #fff;
+                border: none;
+                cursor: pointer;
+                transition: background-color 0.3s;
+            }
+
+            .graph-controls button:hover {
+                background-color: #0056b3;
+            }
+
+            /* Styling for labels */
+            .graph-controls label {
+                font-weight: bold;
+                font-size: 14px;
+                margin-right: 5px;
+            }
+
+            /* Styling for the canvas */
+            #graphCanvas {
+                border: 1px solid #ccc;
+                border-radius: 4px;
+                background-color: #fff;
+            }
+        </style>
+    </div>
+</main>
+<style>
+    table {
+      border-collapse: collapse; /*Important for collapsing borders */
+      width: 100%; /* Adjust as needed */
+    }
+  
+    th,
+    td {
+      border: 1px solid #dddddd86; /* Light gray border */
+      padding: 8px; /* Add some padding for readability */
+      text-align: left; /* Adjust text alignment as needed */
+    }
+  
+    th {
+      background-color: #f2f2f249; /* Optional: Light gray background for header */
+    }
+  </style>

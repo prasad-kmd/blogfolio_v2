@@ -27,7 +27,7 @@
         <div class="stg-col-6 stg-offset-1" data-unload="fade-right">
             <div class="pmbsweb-cta-form-content">
                 <div class="pmbsweb-cta-form-title" data-split-appear="fade-up" data-split-delay="100" data-split-by="line">
-                    Let's discuss your next creative project.
+                    Let's discuss about next creative project.
                 </div>
                 <div class="pmbsweb-cta-text">
                     <div class="stg-row stg-valign-middle">
@@ -35,24 +35,24 @@
                             <i class="pmbsweb-cta-icon"></i>
                         </div>
                         <div class="stg-col-8 stg-tp-col-7 stg-m-col-8 stg-m-offset-1" data-appear="fade-left">
-                            <p class="pmbsweb-large-text">We help creative agencies, designers, and other creative people showcase their perfect work.</p>
+                            <p class="pmbsweb-large-text">{{ site.description }}.</p>
                         </div>
                     </div>
                 </div>
                 <div class="pmbsweb-cta-counters pmbsweb-grid-3cols pmbsweb-m-grid-3cols" data-stagger-appear="fade-up" data-stagger-delay="100">
                     <!-- Counter Item -->
                     <div class="pmbsweb-counter pmbsweb-small-counter" data-delay="3000">
-                        <div class="pmbsweb-counter-number">420</div>
+                        <div class="pmbsweb-counter-number">{{ site.portfolio | size }}</div>
                         <div class="pmbsweb-counter-label">Projects Done</div>
                     </div><!-- .pmbsweb-counter -->
                     <!-- Counter Item -->
                     <div class="pmbsweb-counter pmbsweb-small-counter" data-delay="3000">
-                        <div class="pmbsweb-counter-number" data-suffix="K+">8</div>
-                        <div class="pmbsweb-counter-label">Happy Clients</div>
+                        <div class="pmbsweb-counter-number" data-suffix="+">{{ site.posts | size }}</div>
+                        <div class="pmbsweb-counter-label">Total Posts</div>
                     </div><!-- .pmbsweb-counter -->
                     <!-- Counter Item -->
                     <div class="pmbsweb-counter pmbsweb-small-counter" data-delay="3000">
-                        <div class="pmbsweb-counter-number" data-suffix="+">12</div>
+                        <div class="pmbsweb-counter-number" data-suffix="+">{{ site.experience }}</div>
                         <div class="pmbsweb-counter-label">Years in Work</div>
                     </div><!-- .pmbsweb-counter -->
                 </div>

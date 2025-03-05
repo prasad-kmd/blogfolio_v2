@@ -16,9 +16,9 @@
     {% if image_count > 0 %}
     <!-- Slider -->
     <div class="pmbsweb-slider-wrapper pmbsweb-masked-block stg-bottom-gap" data-appear="fade-up" data-delay="100" data-unload="fade-up">
-        <div class="swiper pmbsweb-slider pmbsweb-masked-media" data-autoplay="2000" data-duration="800" data-effect="slide">
+        <div class="swiper pmbsweb-slider pmbsweb-masked-media" data-autoplay="2000" data-duration="800" data-effect="coverflow">
             <div class="swiper-wrapper">
-                {% for i in (1..3) %}
+                {% for i in (1..6) %}
                     {% if i <= image_count %}
                         {% assign image = images[i] | split: '>' | first | split: 'src="' | last | split: '"' | first %}
                 <!-- Slider Item -->
